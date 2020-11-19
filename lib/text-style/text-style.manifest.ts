@@ -1,10 +1,11 @@
 import { ColorManifest } from "../color";
 import { TextDecorationManifest, TextDecorationStyleManifest } from "../text-decoration";
 
-export interface TextStyleManifest {
+
+export interface TextStyle {
     /**
-     * css: https://developer.mozilla.org/en-US/docs/Web/CSS/font-family
-     */
+        * css: https://developer.mozilla.org/en-US/docs/Web/CSS/font-family
+        */
     fontFamily: string
 
     /**
@@ -14,15 +15,15 @@ export interface TextStyleManifest {
      */
     fontWeight: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | "normal" | "bold" | "lighter" | "bolder"
 
-    backgroundColor: ColorManifest
+    backgroundColor?: ColorManifest
 
     color: ColorManifest
 
     decoration: TextDecorationManifest
 
-    decorationStyle: TextDecorationStyleManifest
+    decorationStyle?: TextDecorationStyleManifest
 
-    decorationThickness: number
+    decorationThickness?: number
 
     // region spacing related
     /**
@@ -35,7 +36,7 @@ export interface TextStyleManifest {
      * css: https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing
      * flutter: https://api.flutter.dev/flutter/painting/TextStyle/wordSpacing.html
      */
-    wordSpacing: number
+    wordSpacing?: number
 
 
     /**
@@ -45,4 +46,9 @@ export interface TextStyleManifest {
      */
     lineHeight: number
     // endregion spacing related
+}
+
+
+export interface TextStyleManifest extends TextStyle {
+
 }
