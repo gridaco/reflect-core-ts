@@ -11,4 +11,14 @@ export enum TextAlign {
     justify,
 }
 
+/**
+ * [flutter TextAlignVertical](https://api.flutter.dev/flutter/painting/TextAlignVertical-class.html)
+ */
+export enum TextAlignVertical {
+    start,
+    center,
+    bottom
+}
+
 export type TextAlignManifest = TextAlign
+export type TextAlignVerticalManifest = TextAlignVertical
