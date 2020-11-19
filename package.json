@@ -2,9 +2,15 @@
     "name": "@reflect.bridged.xyz/core",
     "version": "0.0.1",
     "scripts": {},
-    "dependencies": {
-    },
+    "main": "dist/index.js",
+    "dependencies": {},
     "devDependencies": {
         "typescript": "^4.0.5"
-    }
+    },
+    "files": [
+        "README.md",
+        "dist",
+        "LICENSE",
+        "index.js"
+    ]
 }

@@ -1,4 +1,6 @@
 import { ColorManifest } from "../color";
+import { FontStyleManifest } from "../font-style";
+import { FontWeightManifest } from "../font-weight";
 import { TextDecorationManifest, TextDecorationStyleManifest } from "../text-decoration";
 
 
@@ -13,7 +15,17 @@ export interface TextStyle {
      * 
      * [flutter FontWeight](https://api.flutter.dev/flutter/dart-ui/FontWeight-class.html)
      */
-    fontWeight: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | "normal" | "bold" | "lighter" | "bolder"
+    fontWeight: FontWeightManifest
+
+    /**
+     * [css](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size)
+     */
+    fontSize: number
+
+    /**
+     * [css](https://developer.mozilla.org/en-US/docs/Web/CSS/font-style)
+     */
+    fontStyle: FontStyleManifest
 
     backgroundColor?: ColorManifest
 
@@ -50,5 +62,5 @@ export interface TextStyle {
 
 
 export interface TextStyleManifest extends TextStyle {
-
+    name?: string
 }
