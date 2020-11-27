@@ -19,6 +19,9 @@
       "node_modules",
       "dist",
       "example",
-      "doc"
+      "doc",
+      
+      // index.ts is for non-distributed submodule-only usage
+      "index.ts"
     ]
   }
