@@ -1,0 +1,1 @@
+export * from "./main-axis-size.manifest"
