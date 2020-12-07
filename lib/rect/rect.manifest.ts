@@ -6,7 +6,8 @@ import { BorderRadiusManifest } from "../ui/border-radius";
  * [konva#Rect](https://konvajs.org/api/Konva.Rect.html)
  */
 export interface CGRectManifest {
-
+    width: number
+    height: number
     cornerRadius?: BorderRadiusManifest
 
     // TODO  - support gradient fill
