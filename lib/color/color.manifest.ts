@@ -1,5 +1,14 @@
 import { Colors } from "./colors"
 
+/**
+ * the generic built-form color format, used for color converters
+ */
+export enum ColorFormat {
+    hex = 'hex',
+    hex6 = 'hex6',
+    hex8 = 'hex8',
+}
+
 export interface RGB {
     r: number
     g: number
@@ -29,7 +38,7 @@ export type NamedColor = Colors
 /**
  * Color type alias. 
  */
-export type Color = RGB | RGBA | HexColor | ValueColor
+export type Color = RGB | RGBA | HexColor | ValueColor | NamedColor
 
 export interface ColorManifest {
 
