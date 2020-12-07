@@ -1,11 +1,12 @@
+import { IRadius } from "../radius/radius.manifest";
 
 /**
  * [css#border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius)
  */
 export interface BorderRadiusManifest {
-    all?: number
-    tl?: number
-    tr?: number
-    bl?: number
-    br?: number
+    all?: IRadius
+    tl?: IRadius
+    tr?: IRadius
+    bl?: IRadius
+    br?: IRadius
 }
