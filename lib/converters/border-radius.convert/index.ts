@@ -6,13 +6,13 @@ import { BorderRadiusManifest } from "../../ui/border-radius"
  */
 export function convertBorderRadius(borderRadius: BorderRadiusManifest): number | number[] {
     if (borderRadius.all !== undefined) {
-        return borderRadius.all!
+        return borderRadius.all! as number
     } else {
         return [
-            borderRadius.tl!,
-            borderRadius.tr!,
-            borderRadius.br!,
-            borderRadius.bl!,
+            borderRadius.tl! as number,
+            borderRadius.tr! as number,
+            borderRadius.br! as number,
+            borderRadius.bl! as number,
         ]
     }
 }
