@@ -8,7 +8,7 @@ import { BorderRadiusManifest } from "../ui/border-radius";
 export interface CGRectManifest {
     width: number
     height: number
-    cornerRadius?: BorderRadiusManifest
+    borderRadius?: BorderRadiusManifest
 
     // TODO  - support gradient fill
 
