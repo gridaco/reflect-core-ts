@@ -5,7 +5,10 @@ import { Color, ColorFormat, RGB, RGBA } from "../../color";
  * @param color 
  * @param format 
  */
-export function convertReflectColorToUniversal(color: Color, format = ColorFormat.hex): string {
+export function convertReflectColorToUniversal(color?: Color, format = ColorFormat.hex): string | undefined {
+    if (color === undefined || color === null) {
+        return undefined
+    }
 
     /**
      * handle string typed color - which is hex color if valid.
@@ -87,6 +90,23 @@ export function rgbaTo8Hex(color: RGBA, options?: {
     }
 }
 
+
+/**
+ * fetch opacity / alpha value from color, returns 0 if not present.
+ * @param color 
+ */
+export function fetchColrOpacity(color?: Color) {
+    if (color) {
+        return colorToRGBA(color).a
+    } else {
+        return 1
+    }
+}
+
+export function colorToRGBA(color: Color): RGBA {
+    // TODO add other type alias converting.
+    return (color as RGBA)
+}
 
 
 function isHexColor(hex: string) {
