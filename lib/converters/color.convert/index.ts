@@ -67,7 +67,12 @@ export function rgbTo8hex(color: RGB, alpha: number): string {
 }
 
 export function rgbaTo8Hex(color: RGBA): string {
-    return rgbTo8hex(color, color.a);
+    try {
+        return rgbTo8hex(color, color.a);
+    } catch (e) {
+        console.warn('error while converting color to hex string, returning fallback #FFFFFF')
+        return '#FFFFFF'
+    }
 }
 
 
