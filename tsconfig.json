@@ -1,27 +1,23 @@
 {
     "compilerOptions": {
-      "target": "es2016",
-      "module": "commonjs",
-      "lib": [
-        "es2017",
-        "es7",
-        "es6",
-        "dom"
-      ],
-      "declaration": true,
-      "outDir": "dist",
-      "esModuleInterop": true,
-      "sourceMap": true,
-      "experimentalDecorators": true,
-      "noUnusedLocals": false,
+        "target": "es2016",
+        "module": "commonjs",
+        "lib": ["es2017", "es7", "es6", "dom"],
+        "declaration": true,
+        "outDir": "dist",
+        "esModuleInterop": true,
+        "sourceMap": true,
+        "experimentalDecorators": true,
+        "noUnusedLocals": false,
+        "skipLibCheck": true
     },
     "exclude": [
-      "node_modules",
-      "dist",
-      "example",
-      "doc",
-      
-      // index.ts is for non-distributed submodule-only usage
-      "index.ts"
+        "node_modules",
+        "dist",
+        "example",
+        "doc",
+
+        // index.ts is for non-distributed submodule-only usage
+        "index.ts"
     ]
-  }
+}
