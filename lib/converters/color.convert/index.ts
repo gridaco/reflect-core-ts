@@ -123,7 +123,10 @@ function hexToRGBA(hex: string, format: ColorFormat = ColorFormat.rgba): RGBA {
     let a = 1
 
     try {
-        a = parseInt(hex.slice(7, 9), 16);
+        if (hex.length >= 8) {
+            // 8 or 9 if '#' included in hex, then 9, if not, 8
+            a = parseInt(hex.slice(7, 9), 16);
+        }
     } catch (_) { }
 
     switch (format) {
