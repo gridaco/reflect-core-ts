@@ -103,9 +103,50 @@ export function fetchColrOpacity(color?: Color) {
     }
 }
 
-export function colorToRGBA(color: Color): RGBA {
+export function colorToRGBA(color: Color, format: ColorFormat = ColorFormat.rgba): RGBA {
     // TODO add other type alias converting.
+    // console.log('converting color to rgba', color)
+
+    if (typeof color == 'string') {
+        return hexToRGBA(color, format)
+    }
+
     return (color as RGBA)
+}
+
+
+function hexToRGBA(hex: string, format: ColorFormat = ColorFormat.rgba): RGBA {
+    var r = parseInt(hex.slice(1, 3), 16),
+        g = parseInt(hex.slice(3, 5), 16),
+        b = parseInt(hex.slice(5, 7), 16);
+
+    let a = 1
+
+    try {
+        a = parseInt(hex.slice(7, 9), 16);
+    } catch (_) { }
+
+    switch (format) {
+        case ColorFormat.rgba:
+            return {
+                r: r,
+                g: g,
+                b: b,
+                a: a
+            }
+        case ColorFormat.rgbaF:
+            return {
+                r: r / 255.0,
+                g: g / 255.0,
+                b: b / 255.0,
+                a: a
+            }
+        default:
+            throw `format ${format} is not supported when converting hex to rgba`
+    }
+
+
+
 }
 
 

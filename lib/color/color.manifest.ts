@@ -7,6 +7,11 @@ export enum ColorFormat {
     hex = 'hex',
     hex6 = 'hex6',
     hex8 = 'hex8',
+    rgba = 'rbba',
+    /**
+     * rgba represended by float values. r: 255 is 1.0F
+     */
+    rgbaF = 'rgbaf'
 }
 
 export interface RGB {
