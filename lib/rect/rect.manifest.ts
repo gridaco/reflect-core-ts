@@ -3,6 +3,7 @@ import { Color } from "../color";
 import { BorderRadiusManifest } from "../ui/border-radius";
 
 /**
+ * reflect's standard core graphics rectangle contains border radius, fill, and more.
  * [konva#Rect](https://konvajs.org/api/Konva.Rect.html)
  */
 export interface CGRectManifest {
