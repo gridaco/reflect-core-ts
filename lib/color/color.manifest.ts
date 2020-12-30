@@ -45,6 +45,4 @@ export type NamedColor = Colors
  */
 export type Color = RGB | RGBA | HexColor | ValueColor | NamedColor
 
-export interface ColorManifest {
-
-}
+export type ColorManifest = Color
