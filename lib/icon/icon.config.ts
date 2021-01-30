@@ -1,6 +1,6 @@
 export interface IconConfig {
     default_size: string
-    variant: "outlined" | "outlined" | "twotone" | "default" | "default" | "sharp"
+    variant: "outlined" | "twotone" | "default" | "sharp" | "all"
     family?: string
     host: "material" | "reflect" | string
 }
