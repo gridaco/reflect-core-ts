@@ -4,7 +4,7 @@
     "scripts": {
         "postinstall": "tsc"
     },
-    "main": "dist/index.js",
+    "main": "index.js",
     "dependencies": {},
     "devDependencies": {
         "typescript": "^4.1.2"
