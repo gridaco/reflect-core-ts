@@ -1,8 +1,8 @@
 {
     "name": "@reflect.bridged.xyz/core",
-    "version": "0.0.1",
+    "version": "0.0.2rc",
     "scripts": {
-        "postinstall": "tsc"
+        "prepublish": "tsc"
     },
     "main": "index.js",
     "dependencies": {},
