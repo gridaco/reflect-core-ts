@@ -1,10 +1,12 @@
 {
     "name": "@reflect.bridged.xyz/core",
-    "version": "0.0.2rc",
+    "version": "0.0.2rc4",
     "scripts": {
-        "prepublish": "tsc"
+        "prepublish": "tsc",
+        "test": "tsc"
     },
-    "main": "index.js",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "dependencies": {},
     "devDependencies": {
         "typescript": "^4.1.2"
