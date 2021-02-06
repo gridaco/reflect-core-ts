@@ -1,6 +1,6 @@
 {
     "name": "@reflect.bridged.xyz/core",
-    "version": "0.0.2rc4",
+    "version": "0.0.2-rc.4",
     "scripts": {
         "prepublish": "tsc",
         "test": "tsc"
