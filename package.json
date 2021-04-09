@@ -2,7 +2,7 @@
     "name": "@reflect-ui/core",
     "version": "0.0.2-rc.5",
     "scripts": {
-        "prepublish": "tsc",
+        "prepack": "tsc",
         "test": "tsc"
     },
     "main": "dist/index.js",
