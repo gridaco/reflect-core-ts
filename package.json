@@ -1,6 +1,6 @@
 {
     "name": "@reflect-ui/core",
-    "version": "0.0.2-rc.5.local",
+    "version": "0.0.2-rc.6",
     "scripts": {
         "prepack": "tsc",
         "test": "tsc"
