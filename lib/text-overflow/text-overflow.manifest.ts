@@ -3,10 +3,10 @@
  * flutter: https://api.flutter.dev/flutter/rendering/TextOverflow-class.html
  */
 export enum TextOverflow {
-    clip,
-    ellipsis,
-    fade,
-    visible
+    clip = "clip",
+    ellipsis = "ellipsis",
+    fade = "fade",
+    visible = "visible",
 }
 
-export type TextOverflowManifest = TextOverflow
+export type TextOverflowManifest = TextOverflow;
