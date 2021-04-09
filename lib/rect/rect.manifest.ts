@@ -7,21 +7,21 @@ import { BorderRadiusManifest } from "../ui/border-radius";
  * [konva#Rect](https://konvajs.org/api/Konva.Rect.html)
  */
 export interface CGRectManifest {
-    width: number
-    height: number
-    borderRadius?: BorderRadiusManifest
+    width: number;
+    height: number;
+    borderRadius?: BorderRadiusManifest;
 
     // TODO  - support gradient fill
 
     // fills - figma
     // fill - graphics standard
-    fill?: Color
-    opacity?: number
+    fill?: Color;
+    opacity?: number;
 
     stroke?: {
-        strokeColor: string
-        strokeWidth: number
-    }
+        strokeColor: string;
+        strokeWidth: number;
+    };
 
-    shadow?: BoxShadowManifest
+    shadow?: BoxShadowManifest;
 }
