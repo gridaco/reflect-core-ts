@@ -13,5 +13,6 @@ export * from "./ui";
 export * as cg from "./cg";
 export * as cgr from "./cgr";
 export * as color from "./color";
+export * as utils from "./utils";
 
 export * as converters from "./converters";
