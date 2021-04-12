@@ -55,7 +55,7 @@ interface LetterSpacing {
     readonly unit: "PIXELS" | "PERCENT";
 }
 
-interface TextSpanAttribute extends ParagraphTokenStyle {
+export interface TextSpanAttribute extends ParagraphTokenStyle {
     /**
      * location of this text on parent rich text
      */
