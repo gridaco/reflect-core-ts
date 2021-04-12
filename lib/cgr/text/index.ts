@@ -149,7 +149,7 @@ type LineHeight =
           readonly unit: "PIXELS" | "PERCENT";
       };
 
-enum TextCaseModifier {
+export enum TextCaseModifier {
     /**
      * display text as-is
      */
