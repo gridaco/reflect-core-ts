@@ -1,6 +1,9 @@
 /**
  * css: https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration
+ *
  * flutter: https://api.flutter.dev/flutter/dart-ui/TextDecoration-class.html
+ *
+ * figma: `type TextDecoration = "NONE" | "UNDERLINE" | "STRIKETHROUGH"`
  */
 export enum TextDecoration {
     none,
@@ -21,5 +24,5 @@ export enum TextDecorationStyle {
     wavy,
 }
 
-export type TextDecorationManifest = TextDecoration
-export type TextDecorationStyleManifest = TextDecorationStyle
+export type TextDecorationManifest = TextDecoration;
+export type TextDecorationStyleManifest = TextDecorationStyle;
