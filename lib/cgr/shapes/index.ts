@@ -1,1 +1,1 @@
-export interface ShapeMixin {}
+export * from "./rect";
