@@ -1,5 +1,7 @@
 import { SolidPaint } from "./solid-paint";
 import { ImagePaint } from "./image-paint";
-declare type Paint = SolidPaint | ImagePaint;
+import { GradientPaint } from "./gradient-paint";
 
-export { Paint, SolidPaint, ImagePaint };
+declare type Paint = SolidPaint | ImagePaint | GradientPaint;
+
+export { Paint, SolidPaint, ImagePaint, GradientPaint };

@@ -1,13 +1,12 @@
+import { Transform } from "@reflect-ui/uiutils/lib/types";
 import { cgrmixin } from "..";
+import { RGBAF } from "../../color";
+import { GradientType } from "../../gradient/gradient.manifest";
 
-interface GradientPaint extends cgrmixin.PaintMixin {
-    readonly type:
-        | "GRADIENT_LINEAR"
-        | "GRADIENT_RADIAL"
-        | "GRADIENT_ANGULAR"
-        | "GRADIENT_DIAMOND";
-    // readonly gradientTransform: Transform
-    // readonly gradientStops: ReadonlyArray<ColorStop>
-
-    // readonly blendMode?: BlendMode
+export interface GradientPaint extends cgrmixin.PaintMixin {
+    type: "GRADIENT";
+    gradientType: GradientType;
+    readonly gradientTransform: Transform;
+    stops: Array<number>;
+    colors: Array<RGBAF>;
 }
