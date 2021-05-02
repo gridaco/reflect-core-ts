@@ -17,4 +17,10 @@ export * as cgr from "./cgr";
 export * as color from "./color";
 export * as utils from "./uiutils";
 
-export * as converters from "./converters";
+// region utils
+// region converter utils
+export * as converters from "./_utils/converters";
+export * as convert_colors from "./_utils/converters/color.convert";
+export * as convert_offset from "./_utils/converters/offset.convert";
+// endregion converter utils
+// endregion utils

@@ -1,4 +1,4 @@
-import { Color, ColorFormat, RGB, RGBA, RGBAF } from "../../color";
+import { Color, ColorFormat, RGB, RGBA, RGBAF } from "../../../color";
 
 /**
  * converts reflect color type alias to universal color format.
