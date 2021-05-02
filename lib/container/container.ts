@@ -1,3 +1,4 @@
+import { EdgeInsetsManifest } from "../ui";
 import { Widget } from "../widget";
 
 /**
@@ -10,7 +11,7 @@ export class Container extends Widget {
     child: Widget;
 
     padding: "";
-    margin: "";
+    margin: EdgeInsetsManifest;
 
     // opacity
     // size
