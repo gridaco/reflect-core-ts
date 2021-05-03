@@ -15,9 +15,10 @@ export class Container extends Widget {
 
     padding: EdgeInsetsGeometry;
     margin: EdgeInsetsGeometry;
-    fills: ""[]; // todo
-    borders: ""[]; // todo
+    fills: any[]; // todo
+    borders: any[]; // todo
 
+    visible: boolean;
     opacity: number;
     // filter?
     // transform
