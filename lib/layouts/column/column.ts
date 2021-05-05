@@ -20,10 +20,10 @@ export class Column extends Flex {
         children,
     }: {
         children: Widget[];
-        mainAxisAlignment: MainAxisAlignment;
-        mainAxisSize: MainAxisSize;
-        crossAxisAlignment: CrossAxisAlignment;
-        verticalDirection: VerticalDirection;
+        mainAxisAlignment?: MainAxisAlignment;
+        mainAxisSize?: MainAxisSize;
+        crossAxisAlignment?: CrossAxisAlignment;
+        verticalDirection?: VerticalDirection;
     }) {
         // MainAxisAlignment mainAxisAlignment: MainAxisAlignment.start, MainAxisSize mainAxisSize: MainAxisSize.max, CrossAxisAlignment crossAxisAlignment: CrossAxisAlignment.center, TextDirection? textDirection, VerticalDirection verticalDirection: VerticalDirection.down, TextBaseline? textBaseline, List<Widget> children: const <Widget>[]
         super({
