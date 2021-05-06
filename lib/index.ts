@@ -8,11 +8,26 @@ export * from "./text-decoration";
 export * from "./icon";
 export * from "./font-weight";
 export * from "./font-style";
-export * from "./layouts";
 export * from "./rect";
 export * from "./ui";
 export * from "./image";
 export * from "./vector";
+
+// region layouts
+export * from "./layouts";
+export * from "./flex";
+export * from "./row";
+export * from "./column";
+export * from "./stack";
+// endregion layouts
+
+// region axis
+export * from "./axis";
+export * from "./cross-axis-alignment";
+export * from "./main-axis-alignment";
+export * from "./vertical-direction";
+// endregion axis
+
 export * as cg from "./cg";
 export * as cgr from "./cgr";
 export * as color from "./color";

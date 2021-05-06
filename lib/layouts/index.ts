@@ -1,12 +1,7 @@
-export * from "./flex";
-export * from "./row";
-export * from "./column";
-export * from "./stack";
-
-import type { Row } from "./row";
-import type { Flex } from "./flex";
-import type { Column } from "./column";
-import type { Stack } from "./stack";
+import type { Row } from "../row";
+import type { Flex } from "../flex";
+import type { Column } from "../column";
+import type { Stack } from "../stack";
 
 /**
  * the type alias that can represent a layout

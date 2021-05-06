@@ -1,10 +1,10 @@
-import { Widget } from "../../widget/widget";
-import { Axis } from "../flex/axis";
-import { CrossAxisAlignment } from "../flex/cross-axis-alignment";
+import { Widget } from "../widget/widget";
+import { Axis } from "../axis";
+import { CrossAxisAlignment } from "../cross-axis-alignment";
 import { Flex } from "../flex/flex";
-import { MainAxisAlignment } from "../flex/main-axis-alignment";
-import { MainAxisSize } from "../flex/main-axis-size";
-import { VerticalDirection } from "../flex/vertical-direction";
+import { MainAxisAlignment } from "../main-axis-alignment";
+import { MainAxisSize } from "../main-axis-size";
+import { VerticalDirection } from "../vertical-direction";
 
 /**
  * references:
