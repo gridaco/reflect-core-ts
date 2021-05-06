@@ -3,6 +3,7 @@ import { ITextStyle } from "../text-style";
 import { Widget } from "../widget";
 
 export class Text extends Widget {
+    readonly _type: "Text" = "Text";
     data: string;
     overflow: TextOverflow;
     style: ITextStyle;
