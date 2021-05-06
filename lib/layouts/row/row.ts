@@ -12,6 +12,7 @@ import { VerticalDirection } from "../flex/vertical-direction";
  * [flutter#Row](https://api.flutter.dev/flutter/widgets/Row-class.html)
  */
 export class Row extends Flex {
+    readonly _type: "Row" = "Row";
     constructor({
         mainAxisAlignment = MainAxisAlignment.start,
         mainAxisSize = MainAxisSize.max,

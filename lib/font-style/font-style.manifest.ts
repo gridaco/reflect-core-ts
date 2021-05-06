@@ -1,10 +1,9 @@
-
 /**
  * [css](https://developer.mozilla.org/en-US/docs/Web/CSS/font-style)
  */
 export enum FontStyle {
-    normal,
-    italic,
+    normal = "normal",
+    italic = "italic",
 }
 
-export type FontStyleManifest = FontStyle
+export type FontStyleManifest = FontStyle;

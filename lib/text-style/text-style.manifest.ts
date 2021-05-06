@@ -1,66 +1,66 @@
 import { ColorManifest } from "../color";
 import { FontStyleManifest } from "../font-style";
 import { FontWeightManifest } from "../font-weight";
-import { TextDecorationManifest, TextDecorationStyleManifest } from "../text-decoration";
+import {
+    TextDecorationManifest,
+    TextDecorationStyleManifest,
+} from "../text-decoration";
 
-
-export interface TextStyle {
+export interface ITextStyle {
     /**
-        * css: https://developer.mozilla.org/en-US/docs/Web/CSS/font-family
-        */
-    fontFamily: string
+     * css: https://developer.mozilla.org/en-US/docs/Web/CSS/font-family
+     */
+    fontFamily: string;
 
     /**
      * [css font-weight](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight)
-     * 
+     *
      * [flutter FontWeight](https://api.flutter.dev/flutter/dart-ui/FontWeight-class.html)
      */
-    fontWeight: FontWeightManifest
+    fontWeight: FontWeightManifest;
 
     /**
      * [css](https://developer.mozilla.org/en-US/docs/Web/CSS/font-size)
      */
-    fontSize: number
+    fontSize: number;
 
     /**
      * [css](https://developer.mozilla.org/en-US/docs/Web/CSS/font-style)
      */
-    fontStyle: FontStyleManifest
+    fontStyle?: FontStyleManifest;
 
-    backgroundColor?: ColorManifest
+    backgroundColor?: ColorManifest;
 
-    color: ColorManifest
+    color: ColorManifest;
 
-    decoration: TextDecorationManifest
+    decoration?: TextDecorationManifest;
 
-    decorationStyle?: TextDecorationStyleManifest
+    decorationStyle?: TextDecorationStyleManifest;
 
-    decorationThickness?: number
+    decorationThickness?: number;
 
     // region spacing related
     /**
      * css: https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing
      * flutter: https://api.flutter.dev/flutter/painting/TextStyle/letterSpacing.html
      */
-    letterSpacing: number // todo - number to letter spacing (em or other css property supported type)
+    letterSpacing?: number; // todo - number to letter spacing (em or other css property supported type)
 
     /**
      * css: https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing
      * flutter: https://api.flutter.dev/flutter/painting/TextStyle/wordSpacing.html
      */
-    wordSpacing?: number
-
+    wordSpacing?: number;
 
     /**
      * [flutter TextStyle#height](https://api.flutter.dev/flutter/painting/TextStyle/height.html)
-     * 
+     *
      * [css line-hgithg](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height)
      */
-    lineHeight: number
+    lineHeight?: number;
     // endregion spacing related
 }
 
-
-export interface TextStyleManifest extends TextStyle {
-    name?: string
+export interface TextStyleManifest extends ITextStyle {
+    name?: string;
 }

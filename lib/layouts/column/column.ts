@@ -12,6 +12,7 @@ import { VerticalDirection } from "../flex/vertical-direction";
  * [flutter#Column](https://api.flutter.dev/flutter/widgets/Column-class.html)
  */
 export class Column extends Flex {
+    readonly _type: "Column" = "Column";
     constructor({
         mainAxisAlignment = MainAxisAlignment.start,
         mainAxisSize = MainAxisSize.max,
