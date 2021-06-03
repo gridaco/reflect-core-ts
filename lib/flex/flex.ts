@@ -1,4 +1,4 @@
-import { Widget } from "../widget";
+import { Widget, WidgetKey } from "../widget";
 import { Axis } from "../axis";
 import { CrossAxisAlignment } from "../cross-axis-alignment";
 import { IFlexManifest } from "./flex.manifest";
@@ -21,6 +21,7 @@ export class Flex extends Widget implements IFlexManifest {
     verticalDirection: VerticalDirection;
 
     constructor({
+        key,
         direction,
         mainAxisAlignment = MainAxisAlignment.start,
         crossAxisAlignment = CrossAxisAlignment.center,
@@ -28,6 +29,7 @@ export class Flex extends Widget implements IFlexManifest {
         children = [],
         verticalDirection,
     }: {
+        key?: WidgetKey;
         children?: Widget[];
         crossAxisAlignment?: CrossAxisAlignment;
         direction?: Axis;
@@ -35,7 +37,9 @@ export class Flex extends Widget implements IFlexManifest {
         mainAxisAlignment?: MainAxisAlignment;
         mainAxisSize?: MainAxisSize;
     }) {
-        super();
+        super({
+            key: key,
+        });
         this.children = children;
         this.crossAxisAlignment = crossAxisAlignment;
         this.direction = direction;

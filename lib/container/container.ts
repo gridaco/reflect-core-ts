@@ -1,6 +1,6 @@
 import { EdgeInsetsManifest } from "../ui";
 import { EdgeInsetsGeometry } from "../ui/edge-insets-geomatry";
-import { Widget } from "../widget";
+import { Widget, WidgetKey } from "../widget";
 
 /**
  * Container, a node equivalant.
@@ -24,7 +24,9 @@ export class Container extends Widget {
     // transform
     // effects
 
-    constructor() {
-        super();
+    constructor({ key = undefined }: { key?: WidgetKey }) {
+        super({
+            key: key,
+        });
     }
 }

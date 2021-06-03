@@ -1,4 +1,4 @@
-import { Widget } from "../widget";
+import { Widget, WidgetKey } from "../widget";
 import { Axis } from "../axis";
 import { CrossAxisAlignment } from "../cross-axis-alignment";
 import { Flex } from "../flex/flex";
@@ -14,12 +14,14 @@ import { VerticalDirection } from "../vertical-direction";
 export class Column extends Flex {
     readonly _type: "Column" = "Column";
     constructor({
+        key,
         mainAxisAlignment = MainAxisAlignment.start,
         mainAxisSize = MainAxisSize.max,
         crossAxisAlignment = CrossAxisAlignment.center,
         verticalDirection = VerticalDirection.down,
         children,
     }: {
+        key: WidgetKey;
         children: Widget[];
         mainAxisAlignment?: MainAxisAlignment;
         mainAxisSize?: MainAxisSize;
@@ -28,6 +30,7 @@ export class Column extends Flex {
     }) {
         // MainAxisAlignment mainAxisAlignment: MainAxisAlignment.start, MainAxisSize mainAxisSize: MainAxisSize.max, CrossAxisAlignment crossAxisAlignment: CrossAxisAlignment.center, TextDirection? textDirection, VerticalDirection verticalDirection: VerticalDirection.down, TextBaseline? textBaseline, List<Widget> children: const <Widget>[]
         super({
+            key: key,
             direction: Axis.vertical,
             mainAxisAlignment: mainAxisAlignment,
             mainAxisSize: mainAxisSize,
