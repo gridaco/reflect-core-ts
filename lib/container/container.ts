@@ -1,4 +1,3 @@
-import { EdgeInsetsManifest } from "../ui";
 import { EdgeInsetsGeometry } from "../ui/edge-insets-geomatry";
 import { Widget, WidgetKey } from "../widget";
 
@@ -11,8 +10,6 @@ export class Container extends Widget {
     width: number;
     height: number;
 
-    child: Widget;
-
     padding: EdgeInsetsGeometry;
     margin: EdgeInsetsGeometry;
     fills: any[]; // todo
@@ -24,9 +21,23 @@ export class Container extends Widget {
     // transform
     // effects
 
-    constructor({ key = undefined }: { key?: WidgetKey }) {
+    constructor({
+        key = undefined,
+        children,
+        margin,
+        padding,
+    }: {
+        key: WidgetKey;
+        children: Widget[] | Widget;
+        margin?: EdgeInsetsGeometry;
+        padding?: EdgeInsetsGeometry;
+    }) {
         super({
             key: key,
         });
+
+        this.children = children;
+        this.margin = margin;
+        this.padding = padding;
     }
 }
