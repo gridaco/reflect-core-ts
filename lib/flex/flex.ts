@@ -6,13 +6,15 @@ import { MainAxisAlignment } from "../main-axis-alignment";
 import { MainAxisSize } from "../main-axis-size";
 import { VerticalDirection } from "../vertical-direction";
 import { BoxShadowManifest } from "../box-shadow";
+import { Container } from "../container";
+import { EdgeInsetsGeometry } from "../ui/edge-insets-geomatry";
 
 /**
  * references:
  *
  * [flutter#flex](https://api.flutter.dev/flutter/widgets/Flex-class.html)
  */
-export class Flex extends Widget implements IFlexManifest {
+export class Flex extends Container implements IFlexManifest {
     readonly _type: "Flex" | "Column" | "Row" = "Flex";
     children: Widget[];
     crossAxisAlignment: CrossAxisAlignment;
@@ -31,6 +33,8 @@ export class Flex extends Widget implements IFlexManifest {
         verticalDirection,
         //
         boxShadow,
+        margin,
+        padding,
     }: {
         key?: WidgetKey;
         children?: Widget[];
@@ -41,10 +45,16 @@ export class Flex extends Widget implements IFlexManifest {
         mainAxisSize?: MainAxisSize;
         //
         boxShadow?: BoxShadowManifest;
+        margin?: EdgeInsetsGeometry;
+        padding?: EdgeInsetsGeometry;
     }) {
         super({
             key: key,
+            children: children,
+            margin: margin,
+            padding: padding,
         });
+
         this.children = children;
         this.crossAxisAlignment = crossAxisAlignment;
         this.direction = direction;

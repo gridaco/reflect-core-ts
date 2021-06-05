@@ -6,6 +6,7 @@ import { MainAxisAlignment } from "../main-axis-alignment";
 import { MainAxisSize } from "../main-axis-size";
 import { VerticalDirection } from "../vertical-direction";
 import { BoxShadowManifest } from "../box-shadow";
+import { EdgeInsetsGeometry } from "../ui/edge-insets-geomatry";
 
 /**
  * references:
@@ -23,6 +24,8 @@ export class Column extends Flex {
         children,
         //
         boxShadow,
+        margin,
+        padding,
     }: {
         key: WidgetKey;
         children: Widget[];
@@ -32,6 +35,8 @@ export class Column extends Flex {
         verticalDirection?: VerticalDirection;
         //
         boxShadow?: BoxShadowManifest;
+        margin?: EdgeInsetsGeometry;
+        padding?: EdgeInsetsGeometry;
     }) {
         // MainAxisAlignment mainAxisAlignment: MainAxisAlignment.start, MainAxisSize mainAxisSize: MainAxisSize.max, CrossAxisAlignment crossAxisAlignment: CrossAxisAlignment.center, TextDirection? textDirection, VerticalDirection verticalDirection: VerticalDirection.down, TextBaseline? textBaseline, List<Widget> children: const <Widget>[]
         super({
@@ -44,6 +49,8 @@ export class Column extends Flex {
             children: children,
             //
             boxShadow: boxShadow,
+            margin: margin,
+            padding: padding,
         });
     }
 }

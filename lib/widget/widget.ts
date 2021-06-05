@@ -1,4 +1,9 @@
 import { BoxShadowManifest } from "../box-shadow";
+import { EdgeInsets } from "../ui/edge-insets";
+import {
+    EdgeInsetsGeomatryManifest,
+    EdgeInsetsGeometry,
+} from "../ui/edge-insets-geomatry";
 
 /**
  * the default widget key interface. infered from design source.
@@ -39,11 +44,23 @@ export interface IBoxShadowWidget {
     boxShadow?: BoxShadowManifest;
 }
 
+export interface IEdgeInsetsWidget {
+    padding?: EdgeInsetsGeometry;
+    margin?: EdgeInsetsGeometry;
+}
+
+/**
+ * Reflect core widget
+ */
 export class Widget
-    implements IWHStyleWidget, IPositionedWidget, IBoxShadowWidget {
+    implements
+        IWHStyleWidget,
+        IPositionedWidget,
+        IBoxShadowWidget,
+        IEdgeInsetsWidget {
     readonly _type: string;
     readonly key?: WidgetKeyLike;
-    children: Widget[];
+    children: Widget[] | Widget;
 
     // IWHStyleWidget
     width: number;
@@ -55,6 +72,10 @@ export class Widget
 
     /// IBoxShadowWidget
     boxShadow?: BoxShadowManifest;
+
+    // IEdgeInsetsWidget
+    padding?: EdgeInsetsGeometry;
+    margin?: EdgeInsetsGeometry;
 
     constructor(p?: { key: WidgetKeyLike }) {
         this.key = p?.key;
