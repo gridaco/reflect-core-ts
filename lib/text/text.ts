@@ -9,6 +9,8 @@ export class Text extends Widget {
     overflow: TextOverflow;
     style: ITextStyle;
     alignment: TextAlign;
+    width: number;
+    height: number;
 
     constructor({
         key,
@@ -16,17 +18,23 @@ export class Text extends Widget {
         overflow = TextOverflow.ellipsis,
         style,
         alignment,
+        width,
+        height,
     }: {
         key: WidgetKey;
         data: string;
         overflow?: TextOverflow;
         style: ITextStyle;
         alignment: TextAlign;
+        width: number;
+        height: number;
     }) {
         super({ key: key });
         this.data = data;
         this.overflow = overflow;
         this.style = style;
         this.alignment = alignment;
+        this.width = width;
+        this.height = height;
     }
 }

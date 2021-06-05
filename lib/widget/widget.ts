@@ -1,3 +1,5 @@
+import { BoxShadowManifest } from "../box-shadow";
+
 /**
  * the default widget key interface. infered from design source.
  */
@@ -23,10 +25,36 @@ export class WidgetKey {
 
 type WidgetKeyLike = WidgetKey;
 
-export class Widget {
+export interface IWHStyleWidget {
+    width?: number;
+    height?: number;
+}
+
+export interface IPositionedWidget {
+    x?: number;
+    y?: number;
+}
+
+export interface IBoxShadowWidget {
+    boxShadow?: BoxShadowManifest;
+}
+
+export class Widget
+    implements IWHStyleWidget, IPositionedWidget, IBoxShadowWidget {
     readonly _type: string;
     readonly key?: WidgetKeyLike;
     children: Widget[];
+
+    // IWHStyleWidget
+    width: number;
+    height?: number;
+
+    // IPositionWidget
+    x?: number;
+    y?: number;
+
+    /// IBoxShadowWidget
+    boxShadow?: BoxShadowManifest;
 
     constructor(p?: { key: WidgetKeyLike }) {
         this.key = p?.key;

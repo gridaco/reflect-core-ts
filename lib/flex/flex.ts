@@ -5,6 +5,7 @@ import { IFlexManifest } from "./flex.manifest";
 import { MainAxisAlignment } from "../main-axis-alignment";
 import { MainAxisSize } from "../main-axis-size";
 import { VerticalDirection } from "../vertical-direction";
+import { BoxShadowManifest } from "../box-shadow";
 
 /**
  * references:
@@ -28,6 +29,8 @@ export class Flex extends Widget implements IFlexManifest {
         mainAxisSize = MainAxisSize.max,
         children = [],
         verticalDirection,
+        //
+        boxShadow,
     }: {
         key?: WidgetKey;
         children?: Widget[];
@@ -36,6 +39,8 @@ export class Flex extends Widget implements IFlexManifest {
         verticalDirection: VerticalDirection;
         mainAxisAlignment?: MainAxisAlignment;
         mainAxisSize?: MainAxisSize;
+        //
+        boxShadow?: BoxShadowManifest;
     }) {
         super({
             key: key,
@@ -46,5 +51,8 @@ export class Flex extends Widget implements IFlexManifest {
         this.mainAxisAlignment = mainAxisAlignment;
         this.mainAxisSize = mainAxisSize;
         this.verticalDirection = verticalDirection;
+
+        //
+        this.boxShadow = boxShadow;
     }
 }

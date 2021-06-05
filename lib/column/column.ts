@@ -5,6 +5,7 @@ import { Flex } from "../flex/flex";
 import { MainAxisAlignment } from "../main-axis-alignment";
 import { MainAxisSize } from "../main-axis-size";
 import { VerticalDirection } from "../vertical-direction";
+import { BoxShadowManifest } from "../box-shadow";
 
 /**
  * references:
@@ -20,6 +21,8 @@ export class Column extends Flex {
         crossAxisAlignment = CrossAxisAlignment.center,
         verticalDirection = VerticalDirection.down,
         children,
+        //
+        boxShadow,
     }: {
         key: WidgetKey;
         children: Widget[];
@@ -27,6 +30,8 @@ export class Column extends Flex {
         mainAxisSize?: MainAxisSize;
         crossAxisAlignment?: CrossAxisAlignment;
         verticalDirection?: VerticalDirection;
+        //
+        boxShadow?: BoxShadowManifest;
     }) {
         // MainAxisAlignment mainAxisAlignment: MainAxisAlignment.start, MainAxisSize mainAxisSize: MainAxisSize.max, CrossAxisAlignment crossAxisAlignment: CrossAxisAlignment.center, TextDirection? textDirection, VerticalDirection verticalDirection: VerticalDirection.down, TextBaseline? textBaseline, List<Widget> children: const <Widget>[]
         super({
@@ -37,6 +42,8 @@ export class Column extends Flex {
             crossAxisAlignment: crossAxisAlignment,
             verticalDirection: verticalDirection,
             children: children,
+            //
+            boxShadow: boxShadow,
         });
     }
 }
