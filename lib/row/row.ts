@@ -6,7 +6,7 @@ import { MainAxisAlignment } from "../main-axis-alignment";
 import { MainAxisSize } from "../main-axis-size";
 import { VerticalDirection } from "../vertical-direction";
 import { BoxShadowManifest } from "../box-shadow";
-import { EdgeInsetsGeometry } from "../ui/edge-insets-geomatry";
+import { EdgeInsets } from "../ui";
 
 /**
  * references:
@@ -35,8 +35,8 @@ export class Row extends Flex {
         verticalDirection?: VerticalDirection;
         //
         boxShadow?: BoxShadowManifest;
-        margin?: EdgeInsetsGeometry;
-        padding?: EdgeInsetsGeometry;
+        margin?: EdgeInsets;
+        padding?: EdgeInsets;
     }) {
         // MainAxisAlignment mainAxisAlignment: MainAxisAlignment.start, MainAxisSize mainAxisSize: MainAxisSize.max, CrossAxisAlignment crossAxisAlignment: CrossAxisAlignment.center, TextDirection? textDirection, VerticalDirection verticalDirection: VerticalDirection.down, TextBaseline? textBaseline, List<Widget> children: const <Widget>[]
         super({

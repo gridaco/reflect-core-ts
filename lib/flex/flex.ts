@@ -7,7 +7,7 @@ import { MainAxisSize } from "../main-axis-size";
 import { VerticalDirection } from "../vertical-direction";
 import { BoxShadowManifest } from "../box-shadow";
 import { Container } from "../container";
-import { EdgeInsetsGeometry } from "../ui/edge-insets-geomatry";
+import { EdgeInsets } from "../ui";
 
 /**
  * references:
@@ -45,8 +45,8 @@ export class Flex extends Container implements IFlexManifest {
         mainAxisSize?: MainAxisSize;
         //
         boxShadow?: BoxShadowManifest;
-        margin?: EdgeInsetsGeometry;
-        padding?: EdgeInsetsGeometry;
+        margin?: EdgeInsets;
+        padding?: EdgeInsets;
     }) {
         super({
             key: key,

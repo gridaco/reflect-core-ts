@@ -1,5 +1,5 @@
 import { BoxShadowManifest } from "../box-shadow";
-import { EdgeInsetsGeometry } from "../ui/edge-insets-geomatry";
+import { EdgeInsets } from "../ui";
 import { Widget, WidgetKey } from "../widget";
 
 export class Stack extends Widget {
@@ -15,8 +15,8 @@ export class Stack extends Widget {
         width: number;
         height: number;
         boxShadow?: BoxShadowManifest;
-        margin?: EdgeInsetsGeometry;
-        padding?: EdgeInsetsGeometry;
+        margin?: EdgeInsets;
+        padding?: EdgeInsets;
     }) {
         super(p);
 
