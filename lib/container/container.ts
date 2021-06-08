@@ -5,6 +5,8 @@ import { Widget, WidgetKey } from "../widget";
  * Container, a node equivalant.
  */
 export class Container extends Widget {
+    _type = "Container";
+
     x: number;
     y: number;
     width: number;
