@@ -7,6 +7,7 @@ import { MainAxisSize } from "../main-axis-size";
 import { VerticalDirection } from "../vertical-direction";
 import { BoxShadowManifest } from "../box-shadow";
 import { EdgeInsets } from "../ui";
+import { BackgroundPaintLike } from "../background";
 
 /**
  * references:
@@ -26,6 +27,7 @@ export class Row extends Flex {
         boxShadow,
         margin,
         padding,
+        background,
     }: {
         key: WidgetKey;
         children: Widget[];
@@ -37,6 +39,7 @@ export class Row extends Flex {
         boxShadow?: BoxShadowManifest;
         margin?: EdgeInsets;
         padding?: EdgeInsets;
+        background?: BackgroundPaintLike[];
     }) {
         // MainAxisAlignment mainAxisAlignment: MainAxisAlignment.start, MainAxisSize mainAxisSize: MainAxisSize.max, CrossAxisAlignment crossAxisAlignment: CrossAxisAlignment.center, TextDirection? textDirection, VerticalDirection verticalDirection: VerticalDirection.down, TextBaseline? textBaseline, List<Widget> children: const <Widget>[]
         super({
@@ -51,6 +54,7 @@ export class Row extends Flex {
             boxShadow: boxShadow,
             margin: margin,
             padding: padding,
+            background: background,
         });
     }
 }

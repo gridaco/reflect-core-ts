@@ -1,8 +1,10 @@
+import { BackgroundPaintLike } from "../background";
 import { BoxShadowManifest } from "../box-shadow";
+import { Container } from "../container";
 import { EdgeInsets } from "../ui";
 import { Widget, WidgetKey } from "../widget";
 
-export class Stack extends Widget {
+export class Stack extends Container {
     readonly _type: "Stack" = "Stack";
 
     width: number;
@@ -17,6 +19,7 @@ export class Stack extends Widget {
         boxShadow?: BoxShadowManifest;
         margin?: EdgeInsets;
         padding?: EdgeInsets;
+        background?: BackgroundPaintLike[];
     }) {
         super(p);
 

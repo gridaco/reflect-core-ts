@@ -8,6 +8,7 @@ import { VerticalDirection } from "../vertical-direction";
 import { BoxShadowManifest } from "../box-shadow";
 import { Container } from "../container";
 import { EdgeInsets } from "../ui";
+import { BackgroundPaintLike } from "../background";
 
 /**
  * references:
@@ -35,6 +36,7 @@ export class Flex extends Container implements IFlexManifest {
         boxShadow,
         margin,
         padding,
+        background,
     }: {
         key?: WidgetKey;
         children?: Widget[];
@@ -47,12 +49,15 @@ export class Flex extends Container implements IFlexManifest {
         boxShadow?: BoxShadowManifest;
         margin?: EdgeInsets;
         padding?: EdgeInsets;
+        background?: BackgroundPaintLike[];
     }) {
         super({
             key: key,
             children: children,
             margin: margin,
             padding: padding,
+            background: background,
+            boxShadow: boxShadow,
         });
 
         this.children = children;
@@ -61,8 +66,5 @@ export class Flex extends Container implements IFlexManifest {
         this.mainAxisAlignment = mainAxisAlignment;
         this.mainAxisSize = mainAxisSize;
         this.verticalDirection = verticalDirection;
-
-        //
-        this.boxShadow = boxShadow;
     }
 }
