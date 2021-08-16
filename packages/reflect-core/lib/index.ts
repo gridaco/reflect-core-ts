@@ -13,6 +13,10 @@ export * from "./ui";
 export * from "./image";
 export * from "./vector";
 
+// core color
+export * from "./color"; /** It's also exported as color below. (remove this comment if this statement is no longer valid.)*/
+//
+
 // region layouts
 export * from "./layouts";
 export * from "./flex";
