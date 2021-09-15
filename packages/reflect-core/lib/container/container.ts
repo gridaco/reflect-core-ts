@@ -2,7 +2,7 @@ import { BackgroundPaintLike } from "../background";
 import { BoxShadowManifest } from "../box-shadow";
 import { GradientPaint } from "../cgr";
 import { Color } from "../color";
-import { EdgeInsets } from "../ui";
+import { BorderRadiusManifest, EdgeInsets } from "../ui";
 import { Widget, WidgetKey } from "../widget";
 
 /**
@@ -28,6 +28,7 @@ export class Container extends Widget {
     // effects
     boxShadow?: BoxShadowManifest;
     background?: BackgroundPaintLike[];
+    borderRadius?: BorderRadiusManifest;
 
     constructor({
         key = undefined,
