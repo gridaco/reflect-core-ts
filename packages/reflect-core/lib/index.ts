@@ -17,6 +17,7 @@ export * from "./vector";
 export * from "./border";
 export * from "./border-radius";
 export * from "./border-side";
+export * from "./box-shadow";
 
 // core color
 export * from "./color"; /** It's also exported as color below. (remove this comment if this statement is no longer valid.)*/
@@ -28,6 +29,8 @@ export * from "./flex";
 export * from "./row";
 export * from "./column";
 export * from "./stack";
+export * from "./main-axis-alignment";
+export * from "./main-axis-size";
 // endregion layouts
 
 // region axis

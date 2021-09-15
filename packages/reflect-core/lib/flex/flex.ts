@@ -21,7 +21,14 @@ export class Flex extends Container implements IFlexManifest {
     crossAxisAlignment: CrossAxisAlignment;
     direction: Axis;
     mainAxisAlignment: MainAxisAlignment;
+
+    /**
+     * rather desides wrap content or fill its parent
+     * - if min, wrap content
+     * - if max, fill its parent
+     */
     mainAxisSize: MainAxisSize;
+
     verticalDirection: VerticalDirection;
 
     constructor({
