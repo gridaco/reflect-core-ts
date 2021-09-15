@@ -1,5 +1,5 @@
 import { BoxShadowManifest } from "../box-shadow";
-import { EdgeInsets } from "../ui/edge-insets";
+import { EdgeInsets } from "../edge-insets";
 
 /**
  * the default widget key interface. infered from design source.

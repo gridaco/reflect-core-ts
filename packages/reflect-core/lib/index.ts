@@ -9,9 +9,14 @@ export * from "./icon";
 export * from "./font-weight";
 export * from "./font-style";
 export * from "./rect";
-export * from "./ui";
+export * from "./offset";
+export * from "./edge-insets";
+export * from "./radius";
 export * from "./image";
 export * from "./vector";
+export * from "./border";
+export * from "./border-radius";
+export * from "./border-side";
 
 // core color
 export * from "./color"; /** It's also exported as color below. (remove this comment if this statement is no longer valid.)*/

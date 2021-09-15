@@ -6,7 +6,7 @@ import { MainAxisAlignment } from "../main-axis-alignment";
 import { MainAxisSize } from "../main-axis-size";
 import { VerticalDirection } from "../vertical-direction";
 import { BoxShadowManifest } from "../box-shadow";
-import { EdgeInsets } from "../ui/edge-insets";
+import { EdgeInsets } from "../edge-insets";
 import { BackgroundPaintLike } from "../background";
 
 /**

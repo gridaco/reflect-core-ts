@@ -1,7 +1,7 @@
 import { BackgroundPaintLike } from "../background";
 import { BoxShadowManifest } from "../box-shadow";
 import { Container } from "../container";
-import { EdgeInsets } from "../ui";
+import type { EdgeInsets } from "..";
 import { Widget, WidgetKey } from "../widget";
 
 export class Stack extends Container {

@@ -7,8 +7,8 @@ import { MainAxisSize } from "../main-axis-size";
 import { VerticalDirection } from "../vertical-direction";
 import { BoxShadowManifest } from "../box-shadow";
 import { Container } from "../container";
-import { EdgeInsets } from "../ui";
 import { BackgroundPaintLike } from "../background";
+import type { Color, EdgeInsets } from "..";
 
 /**
  * references:
@@ -37,6 +37,7 @@ export class Flex extends Container implements IFlexManifest {
         margin,
         padding,
         background,
+        color,
     }: {
         key?: WidgetKey;
         children?: Widget[];
@@ -50,6 +51,7 @@ export class Flex extends Container implements IFlexManifest {
         margin?: EdgeInsets;
         padding?: EdgeInsets;
         background?: BackgroundPaintLike[];
+        color?: Color;
     }) {
         super({
             key: key,
@@ -58,6 +60,7 @@ export class Flex extends Container implements IFlexManifest {
             padding: padding,
             background: background,
             boxShadow: boxShadow,
+            color: color,
         });
 
         this.children = children;
