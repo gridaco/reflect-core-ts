@@ -56,7 +56,7 @@ export class Widget
         IEdgeInsetsWidget {
     readonly _type: string;
     readonly key?: WidgetKeyLike;
-    children: Widget[] | Widget;
+    children?: Widget[] | Widget;
 
     // IWHStyleWidget
     width: number;

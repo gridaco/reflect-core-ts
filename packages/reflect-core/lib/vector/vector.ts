@@ -1,7 +1,9 @@
-import { Widget } from "../widget";
+import { Widget, WidgetKey } from "../widget";
 
 export class VectorWidget extends Widget {
-    constructor(readonly data: string) {
-        super();
+    readonly data: string;
+    constructor(p: { key: WidgetKey; data: string }) {
+        super(p);
+        this.data = p.data;
     }
 }
