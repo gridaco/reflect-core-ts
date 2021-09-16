@@ -7,13 +7,13 @@ import { VerticalDirection } from "../vertical-direction";
 
 export interface IFlexManifest<T = Widget> {
     children: T[];
-    crossAxisAlignment: CrossAxisAlignment;
     direction: Axis;
-    verticalDirection: VerticalDirection;
-    mainAxisAlignment: MainAxisAlignment;
-    mainAxisSize: MainAxisSize;
-    flex: number;
-    itemSpacing: number;
+    crossAxisAlignment?: CrossAxisAlignment;
+    verticalDirection?: VerticalDirection;
+    mainAxisAlignment?: MainAxisAlignment;
+    mainAxisSize?: MainAxisSize;
+    flex?: number;
+    itemSpacing?: number;
     width?: number;
     height?: number;
 }

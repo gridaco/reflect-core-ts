@@ -59,10 +59,10 @@ export class Flex extends Container implements IFlexManifest {
         crossAxisAlignment?: CrossAxisAlignment;
         direction?: Axis;
         itemSpacing?: number;
-        flex: number;
-        verticalDirection: VerticalDirection;
+        flex?: number;
+        verticalDirection?: VerticalDirection;
         mainAxisAlignment?: MainAxisAlignment;
-        mainAxisSize: MainAxisSize;
+        mainAxisSize?: MainAxisSize;
         //
         boxShadow?: BoxShadowManifest;
         margin?: EdgeInsets;
