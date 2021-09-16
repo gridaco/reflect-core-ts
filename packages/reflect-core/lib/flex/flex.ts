@@ -36,7 +36,7 @@ export class Flex extends Container implements IFlexManifest {
         direction,
         mainAxisAlignment = MainAxisAlignment.start,
         crossAxisAlignment = CrossAxisAlignment.center,
-        mainAxisSize = MainAxisSize.max,
+        mainAxisSize,
         children = [],
         verticalDirection,
         //
@@ -52,7 +52,7 @@ export class Flex extends Container implements IFlexManifest {
         direction?: Axis;
         verticalDirection: VerticalDirection;
         mainAxisAlignment?: MainAxisAlignment;
-        mainAxisSize?: MainAxisSize;
+        mainAxisSize: MainAxisSize;
         //
         boxShadow?: BoxShadowManifest;
         margin?: EdgeInsets;
