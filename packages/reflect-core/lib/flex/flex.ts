@@ -30,6 +30,8 @@ export class Flex extends Container implements IFlexManifest {
     mainAxisSize: MainAxisSize;
 
     verticalDirection: VerticalDirection;
+    flex: number;
+    itemSpacing: number;
 
     constructor({
         key,
@@ -40,16 +42,24 @@ export class Flex extends Container implements IFlexManifest {
         children = [],
         verticalDirection,
         //
+        flex,
+        itemSpacing = 0,
         boxShadow,
         margin,
         padding,
         background,
         color,
+        width,
+        height,
     }: {
         key?: WidgetKey;
+        width?: number; //| "auto";
+        height?: number; // | "auto";
         children?: Widget[];
         crossAxisAlignment?: CrossAxisAlignment;
         direction?: Axis;
+        itemSpacing?: number;
+        flex: number;
         verticalDirection: VerticalDirection;
         mainAxisAlignment?: MainAxisAlignment;
         mainAxisSize: MainAxisSize;
@@ -62,6 +72,8 @@ export class Flex extends Container implements IFlexManifest {
     }) {
         super({
             key: key,
+            width: width,
+            height: height,
             children: children,
             margin: margin,
             padding: padding,
@@ -76,5 +88,7 @@ export class Flex extends Container implements IFlexManifest {
         this.mainAxisAlignment = mainAxisAlignment;
         this.mainAxisSize = mainAxisSize;
         this.verticalDirection = verticalDirection;
+        this.flex = flex;
+        this.itemSpacing = itemSpacing;
     }
 }

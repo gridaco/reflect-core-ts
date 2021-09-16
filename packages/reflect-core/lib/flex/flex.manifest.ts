@@ -12,6 +12,10 @@ export interface IFlexManifest {
     verticalDirection: VerticalDirection;
     mainAxisAlignment: MainAxisAlignment;
     mainAxisSize: MainAxisSize;
+    flex: number;
+    itemSpacing: number;
+    width?: number;
+    height?: number;
 }
 
 export type FlexManifest = IFlexManifest;
