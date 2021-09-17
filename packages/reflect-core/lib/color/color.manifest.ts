@@ -33,7 +33,7 @@ export interface RGBAF extends RGBA {}
 /**
  * hex value color such as "#FFFFFF"
  */
-export type HexColor = string;
+export type HexColor = `#${number}`;
 
 /**
  * number based color such as 0xffffffff
