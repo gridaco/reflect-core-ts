@@ -19,6 +19,7 @@ export * from "./border-radius";
 export * from "./border-side";
 export * from "./box-shadow";
 export * from "./single-child-scroll-view";
+export * from "./divider";
 
 // core color
 export * from "./color"; /** It's also exported as color below. (remove this comment if this statement is no longer valid.)*/
