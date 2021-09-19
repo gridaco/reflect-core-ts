@@ -1,5 +1,5 @@
 export interface ImageManifest {
-    src: string
-    width: number
-    height: number
+    readonly src: string;
+    readonly width: number;
+    readonly height: number;
 }
