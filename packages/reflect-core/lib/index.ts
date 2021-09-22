@@ -1,4 +1,6 @@
 export * from "./widget";
+
+export * from "./alignment";
 export * from "./button";
 export * from "./border";
 export * from "./border-radius";
