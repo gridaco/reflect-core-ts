@@ -6,10 +6,10 @@
  * figma: `type TextDecoration = "NONE" | "UNDERLINE" | "STRIKETHROUGH"`
  */
 export enum TextDecoration {
-    none,
-    underline,
-    overline,
-    linethrough,
+    none = "none",
+    underline = "underline",
+    overline = "overline",
+    linethrough = "linethrough",
 }
 
 /**
