@@ -1,7 +1,7 @@
 import { BackgroundPaintLike } from "../background";
 import { BoxShadowManifest } from "../box-shadow";
 import { Container } from "../container";
-import type { EdgeInsets } from "..";
+import type { Color, EdgeInsets } from "..";
 import { Widget, WidgetKey } from "../widget";
 
 export class Stack extends Container {
@@ -19,6 +19,7 @@ export class Stack extends Container {
         boxShadow?: BoxShadowManifest;
         margin?: EdgeInsets;
         padding?: EdgeInsets;
+        color?: Color;
         background?: BackgroundPaintLike[];
     }) {
         super(p);
@@ -29,5 +30,6 @@ export class Stack extends Container {
         this.boxShadow = p.boxShadow;
         this.margin = p.margin;
         this.padding = p.padding;
+        this.color = p.color;
     }
 }
