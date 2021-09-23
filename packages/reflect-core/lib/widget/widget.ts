@@ -59,7 +59,7 @@ export class Widget
     children?: Widget[] | Widget;
 
     // IWHStyleWidget
-    width: number;
+    width?: number;
     height?: number;
 
     // IPositionWidget
