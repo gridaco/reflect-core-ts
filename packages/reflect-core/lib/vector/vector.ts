@@ -1,7 +1,9 @@
+import { Color } from "..";
 import { Widget, WidgetKey } from "../widget";
 
 export class VectorWidget extends Widget {
     readonly data: string;
+    readonly fill?: Color;
     constructor(p: {
         key: WidgetKey;
         width: number;
@@ -11,6 +13,7 @@ export class VectorWidget extends Widget {
          * svg data
          */
         data: string;
+        fill?: Color;
     }) {
         super(p);
         // region general
@@ -20,6 +23,7 @@ export class VectorWidget extends Widget {
 
         // region svg related
         this.data = p.data;
+        this.fill = p.fill;
         // endregion
     }
 }
