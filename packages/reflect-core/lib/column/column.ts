@@ -6,6 +6,7 @@ import { EdgeInsets } from "../edge-insets";
 import { BackgroundPaintLike } from "../background";
 import { IFlexManifest } from "../flex/flex.manifest";
 import { Color } from "../color";
+import { BorderRadiusManifest } from "..";
 
 /**
  * references:
@@ -23,6 +24,7 @@ export class Column extends Flex {
             padding?: EdgeInsets;
             background?: BackgroundPaintLike[];
             color?: Color;
+            borderRadius?: BorderRadiusManifest;
         }
     ) {
         super({ ...p, direction: Axis.vertical });

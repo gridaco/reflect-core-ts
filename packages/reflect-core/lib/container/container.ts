@@ -39,6 +39,7 @@ export class Container extends Widget {
         background,
         color,
         boxShadow,
+        borderRadius,
         width,
         height,
     }: {
@@ -51,6 +52,7 @@ export class Container extends Widget {
         padding?: EdgeInsets;
         background?: BackgroundPaintLike[];
         color?: Color;
+        borderRadius?: BorderRadiusManifest;
     }) {
         super({
             key: key,
@@ -61,6 +63,7 @@ export class Container extends Widget {
         this.margin = margin;
         this.padding = padding;
         this.background = background;
+        this.borderRadius = borderRadius;
         this.color = color;
         this.width = width;
         this.height = height;
