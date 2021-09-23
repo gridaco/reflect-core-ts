@@ -14,6 +14,7 @@ export * from "./font-style";
 export * from "./icon";
 export * from "./image";
 export * from "./offset";
+export * from "./positioned";
 export * from "./text";
 export * from "./text-style";
 export * from "./text-align";
