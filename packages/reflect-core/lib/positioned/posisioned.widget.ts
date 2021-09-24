@@ -1,20 +1,21 @@
+import { DimensionLength } from "..";
 import { Widget, WidgetKey } from "../widget";
 
 interface PositionedManifest {
-    readonly left?: number;
-    readonly top?: number;
-    readonly right?: number;
-    readonly bottom?: number;
+    readonly left?: DimensionLength;
+    readonly top?: DimensionLength;
+    readonly right?: DimensionLength;
+    readonly bottom?: DimensionLength;
     readonly width?: number;
     readonly height?: number;
     readonly child: Widget;
 }
 
 export class Positioned extends Widget implements PositionedManifest {
-    readonly left?: number;
-    readonly top?: number;
-    readonly right?: number;
-    readonly bottom?: number;
+    readonly left?: DimensionLength;
+    readonly top?: DimensionLength;
+    readonly right?: DimensionLength;
+    readonly bottom?: DimensionLength;
     readonly width?: number;
     readonly height?: number;
     readonly child: Widget;

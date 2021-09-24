@@ -9,6 +9,7 @@ import { Widget, WidgetKey } from "../widget";
 
 export type DimensionLength =
     | number
+    | Calculation
     | `${number}vh`
     | `${number}vw`
     /**
@@ -16,6 +17,19 @@ export type DimensionLength =
      * dart - X / double.infinity
      */
     | "match-screen-size";
+
+export type Calculation = {
+    type: "calc";
+    operations: Operations | Operation;
+};
+
+export type Operations = Array<Operation>;
+export type Operation = {
+    type: "op";
+    op: "+" | "-" | "*" | "/";
+    left: DimensionLength;
+    right: DimensionLength;
+};
 
 /**
  * Container, a node equivalant.
