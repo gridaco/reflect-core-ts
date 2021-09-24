@@ -7,6 +7,16 @@ import { Color } from "../color";
 import { BorderRadiusManifest, EdgeInsets } from "../";
 import { Widget, WidgetKey } from "../widget";
 
+export type DimensionLength =
+    | number
+    | `${number}vh`
+    | `${number}vw`
+    /**
+     * css - 100vh / 100vw
+     * dart - X / double.infinity
+     */
+    | "match-screen-size";
+
 /**
  * Container, a node equivalant.
  */
@@ -17,6 +27,10 @@ export class Container extends Widget {
     y: number;
     width: number;
     height: number;
+    minWidth?: DimensionLength;
+    minHeight?: DimensionLength;
+    maxWidth?: DimensionLength;
+    maxHeight?: DimensionLength;
 
     padding: EdgeInsets;
     margin: EdgeInsets;
