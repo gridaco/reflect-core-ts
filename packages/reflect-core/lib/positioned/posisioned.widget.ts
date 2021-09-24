@@ -12,6 +12,8 @@ interface PositionedManifest {
 }
 
 export class Positioned extends Widget implements PositionedManifest {
+    readonly _type = "Positioned";
+
     readonly left?: DimensionLength;
     readonly top?: DimensionLength;
     readonly right?: DimensionLength;
