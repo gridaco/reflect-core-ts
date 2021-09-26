@@ -10,6 +10,7 @@ import { Widget, WidgetKey } from "../widget";
 export type DimensionLength =
     | number
     | Calculation
+    | `${number}%`
     | `${number}vh`
     | `${number}vw`
     /**

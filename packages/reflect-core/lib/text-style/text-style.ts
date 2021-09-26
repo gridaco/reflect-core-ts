@@ -1,3 +1,4 @@
+import { DimensionLength } from "..";
 import { Color, Colors } from "../color";
 import { FontStyle } from "../font-style";
 import { FontWeight } from "../font-weight";
@@ -15,7 +16,7 @@ export class TextStyle implements ITextStyle {
     decorationThickness?: number;
     letterSpacing: number;
     wordSpacing?: number;
-    lineHeight: number;
+    lineHeight: DimensionLength;
 
     constructor({
         fontFamily,

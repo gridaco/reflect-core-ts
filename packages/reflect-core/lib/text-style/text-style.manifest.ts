@@ -1,3 +1,4 @@
+import { DimensionLength } from "..";
 import { ColorManifest } from "../color";
 import { FontStyleManifest } from "../font-style";
 import { FontWeightManifest } from "../font-weight";
@@ -57,7 +58,7 @@ export interface ITextStyle {
      *
      * [css line-hgithg](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height)
      */
-    lineHeight?: number;
+    lineHeight?: DimensionLength;
     // endregion spacing related
 }
 

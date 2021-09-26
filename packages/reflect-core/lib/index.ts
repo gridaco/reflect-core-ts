@@ -19,6 +19,7 @@ export * from "./text";
 export * from "./text-style";
 export * from "./text-align";
 export * from "./text-decoration";
+export * from "./text-overflow";
 export * from "./rect";
 export * from "./radius";
 export * from "./edge-insets";
