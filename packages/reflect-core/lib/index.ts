@@ -8,6 +8,7 @@ export * from "./border-side";
 export * from "./box-shadow";
 export * from "./container";
 export * from "./circle-border";
+export * from "./clip";
 export * from "./divider";
 export * from "./font-weight";
 export * from "./font-style";

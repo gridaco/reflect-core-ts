@@ -1,7 +1,7 @@
 import { BackgroundPaintLike } from "../background";
 import { BoxShadowManifest } from "../box-shadow";
 import { Container } from "../container";
-import type { BorderRadiusManifest, Color, EdgeInsets } from "..";
+import type { BorderRadiusManifest, Clip, Color, EdgeInsets } from "..";
 import { Widget, WidgetKey } from "../widget";
 
 export class Stack extends Container {
@@ -10,6 +10,7 @@ export class Stack extends Container {
     width: number;
     height: number;
     boxShadow?: BoxShadowManifest;
+    clipBehavior?: Clip;
 
     constructor(p: {
         key: WidgetKey;
@@ -20,12 +21,14 @@ export class Stack extends Container {
         borderRadius?: BorderRadiusManifest;
         margin?: EdgeInsets;
         padding?: EdgeInsets;
+        clipBehavior?: Clip;
         color?: Color;
         background?: BackgroundPaintLike[];
     }) {
         super(p);
 
         this.children = p.children;
+        this.clipBehavior = p.clipBehavior;
         this.borderRadius = p.borderRadius;
         this.width = p.width;
         this.height = p.height;
