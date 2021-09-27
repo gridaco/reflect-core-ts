@@ -7,8 +7,8 @@ import { MainAxisSize } from "../main-axis-size";
 import { VerticalDirection } from "../vertical-direction";
 import { BoxShadowManifest } from "../box-shadow";
 import { Container } from "../container";
-import { BackgroundPaintLike } from "../background";
-import type { BorderRadiusManifest, Color, EdgeInsets } from "..";
+import { Background } from "../background";
+import type { BorderRadiusManifest, EdgeInsets } from "..";
 
 /**
  * references:
@@ -67,7 +67,7 @@ export class Flex extends Container implements IFlexManifest {
         boxShadow?: BoxShadowManifest;
         margin?: EdgeInsets;
         padding?: EdgeInsets;
-        background?: BackgroundPaintLike;
+        background?: Background;
         borderRadius?: BorderRadiusManifest;
     }) {
         super({

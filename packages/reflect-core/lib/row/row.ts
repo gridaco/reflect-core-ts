@@ -3,7 +3,7 @@ import { Axis } from "../axis";
 import { Flex } from "../flex/flex";
 import { BoxShadowManifest } from "../box-shadow";
 import type { BorderRadiusManifest, Color, EdgeInsets } from "..";
-import { BackgroundPaintLike } from "../background";
+import { Background, BackgroundPaintLike } from "../background";
 import { IFlexManifest } from "../flex/flex.manifest";
 
 /**
@@ -20,7 +20,7 @@ export class Row extends Flex {
             boxShadow?: BoxShadowManifest;
             margin?: EdgeInsets;
             padding?: EdgeInsets;
-            background?: BackgroundPaintLike;
+            background?: Background;
             borderRadius?: BorderRadiusManifest;
         }
     ) {
