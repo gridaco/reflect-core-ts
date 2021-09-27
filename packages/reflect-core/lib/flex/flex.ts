@@ -48,7 +48,6 @@ export class Flex extends Container implements IFlexManifest {
         margin,
         padding,
         background,
-        color,
         width,
         height,
         borderRadius,
@@ -68,8 +67,7 @@ export class Flex extends Container implements IFlexManifest {
         boxShadow?: BoxShadowManifest;
         margin?: EdgeInsets;
         padding?: EdgeInsets;
-        background?: BackgroundPaintLike[];
-        color?: Color;
+        background?: BackgroundPaintLike;
         borderRadius?: BorderRadiusManifest;
     }) {
         super({
@@ -81,7 +79,6 @@ export class Flex extends Container implements IFlexManifest {
             padding: padding,
             background: background,
             boxShadow: boxShadow,
-            color: color,
             borderRadius: borderRadius,
         });
 

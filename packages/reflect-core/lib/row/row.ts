@@ -20,8 +20,7 @@ export class Row extends Flex {
             boxShadow?: BoxShadowManifest;
             margin?: EdgeInsets;
             padding?: EdgeInsets;
-            background?: BackgroundPaintLike[];
-            color?: Color;
+            background?: BackgroundPaintLike;
             borderRadius?: BorderRadiusManifest;
         }
     ) {

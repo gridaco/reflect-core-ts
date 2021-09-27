@@ -5,7 +5,6 @@ import { BoxShadowManifest } from "../box-shadow";
 import { EdgeInsets } from "../edge-insets";
 import { BackgroundPaintLike } from "../background";
 import { IFlexManifest } from "../flex/flex.manifest";
-import { Color } from "../color";
 import { BorderRadiusManifest } from "..";
 
 /**
@@ -22,8 +21,7 @@ export class Column extends Flex {
             boxShadow?: BoxShadowManifest;
             margin?: EdgeInsets;
             padding?: EdgeInsets;
-            background?: BackgroundPaintLike[];
-            color?: Color;
+            background?: BackgroundPaintLike;
             borderRadius?: BorderRadiusManifest;
         }
     ) {

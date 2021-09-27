@@ -1,4 +1,4 @@
-import { BackgroundPaintLike } from "../background";
+import { Background } from "../background";
 import { BoxShadowManifest } from "../box-shadow";
 import { Container } from "../container";
 import type { BorderRadiusManifest, Clip, Color, EdgeInsets } from "..";
@@ -22,8 +22,7 @@ export class Stack extends Container {
         margin?: EdgeInsets;
         padding?: EdgeInsets;
         clipBehavior?: Clip;
-        color?: Color;
-        background?: BackgroundPaintLike[];
+        background?: Background;
     }) {
         super(p);
 
@@ -35,6 +34,5 @@ export class Stack extends Container {
         this.boxShadow = p.boxShadow;
         this.margin = p.margin;
         this.padding = p.padding;
-        this.color = p.color;
     }
 }

@@ -1,9 +1,7 @@
-import { BackgroundPaintLike } from "../background";
+import { Background } from "../background";
 import { Border } from "../border";
 import { BoxShadowManifest } from "../box-shadow";
 import { BoxShape } from "../box-shape";
-import { GradientPaint } from "../cgr";
-import { Color } from "../color";
 import { BorderRadiusManifest, EdgeInsets } from "../";
 import { Widget, WidgetKey } from "../widget";
 
@@ -50,14 +48,13 @@ export class Container extends Widget {
     padding: EdgeInsets;
     margin: EdgeInsets;
     shape?: BoxShape;
-    color: Color;
     border: Border;
     borderRadius?: BorderRadiusManifest;
     visible: boolean = true;
 
     // effects
     boxShadow?: BoxShadowManifest;
-    background?: BackgroundPaintLike[]; // TODO: allow other types
+    background?: Background;
 
     constructor({
         key = undefined,
@@ -65,7 +62,6 @@ export class Container extends Widget {
         margin,
         padding,
         background,
-        color,
         boxShadow,
         borderRadius,
         width,
@@ -78,8 +74,7 @@ export class Container extends Widget {
         height?: number;
         margin?: EdgeInsets;
         padding?: EdgeInsets;
-        background?: BackgroundPaintLike[];
-        color?: Color;
+        background?: Background;
         borderRadius?: BorderRadiusManifest;
     }) {
         super({
@@ -92,7 +87,6 @@ export class Container extends Widget {
         this.padding = padding;
         this.background = background;
         this.borderRadius = borderRadius;
-        this.color = color;
         this.width = width;
         this.height = height;
     }
