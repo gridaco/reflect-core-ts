@@ -54,7 +54,6 @@ export class Container extends Widget {
     border: Border;
     borderRadius?: BorderRadiusManifest;
     visible: boolean = true;
-    opacity: number = 1;
 
     // effects
     boxShadow?: BoxShadowManifest;
