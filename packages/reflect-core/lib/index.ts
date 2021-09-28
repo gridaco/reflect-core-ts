@@ -10,6 +10,7 @@ export * from "./container";
 export * from "./circle-border";
 export * from "./clip";
 export * from "./clip-rrect";
+export * from "./clip-path";
 export * from "./divider";
 export * from "./font-weight";
 export * from "./font-style";
