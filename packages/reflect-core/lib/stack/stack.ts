@@ -1,7 +1,7 @@
 import { Background } from "../background";
 import { BoxShadowManifest } from "../box-shadow";
 import { Container } from "../container";
-import type { BorderRadiusManifest, Clip, Color, EdgeInsets } from "..";
+import type { Border, BorderRadiusManifest, Clip, Color, EdgeInsets } from "..";
 import { Widget, WidgetKey } from "../widget";
 
 export class Stack extends Container {
@@ -19,6 +19,7 @@ export class Stack extends Container {
         height: number;
         boxShadow?: BoxShadowManifest;
         borderRadius?: BorderRadiusManifest;
+        border?: Border;
         margin?: EdgeInsets;
         padding?: EdgeInsets;
         clipBehavior?: Clip;

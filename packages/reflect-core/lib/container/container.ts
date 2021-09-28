@@ -36,7 +36,13 @@ export type Operation = {
 export class Container extends Widget {
     _type = "Container";
 
+    /**
+     * @deprecated
+     */
     x: number;
+    /**
+     * @deprecated
+     */
     y: number;
     width: number;
     height: number;
@@ -48,7 +54,7 @@ export class Container extends Widget {
     padding: EdgeInsets;
     margin: EdgeInsets;
     shape?: BoxShape;
-    border: Border;
+    border?: Border;
     borderRadius?: BorderRadiusManifest;
     visible: boolean = true;
 
@@ -64,6 +70,7 @@ export class Container extends Widget {
         background,
         boxShadow,
         borderRadius,
+        border,
         width,
         height,
     }: {
@@ -75,6 +82,7 @@ export class Container extends Widget {
         margin?: EdgeInsets;
         padding?: EdgeInsets;
         background?: Background;
+        border?: Border;
         borderRadius?: BorderRadiusManifest;
     }) {
         super({
@@ -87,6 +95,7 @@ export class Container extends Widget {
         this.padding = padding;
         this.background = background;
         this.borderRadius = borderRadius;
+        this.border = border;
         this.width = width;
         this.height = height;
     }

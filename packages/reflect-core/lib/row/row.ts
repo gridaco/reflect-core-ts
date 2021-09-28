@@ -2,7 +2,7 @@ import { WidgetKey } from "../widget/widget";
 import { Axis } from "../axis";
 import { Flex } from "../flex/flex";
 import { BoxShadowManifest } from "../box-shadow";
-import type { BorderRadiusManifest, Color, EdgeInsets } from "..";
+import type { Border, BorderRadiusManifest, Color, EdgeInsets } from "..";
 import { Background, BackgroundPaintLike } from "../background";
 import { IFlexManifest } from "../flex/flex.manifest";
 
@@ -22,6 +22,7 @@ export class Row extends Flex {
             padding?: EdgeInsets;
             background?: Background;
             borderRadius?: BorderRadiusManifest;
+            border?: Border;
         }
     ) {
         super({ ...p, direction: Axis.horizontal });

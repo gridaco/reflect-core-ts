@@ -8,7 +8,7 @@ import { VerticalDirection } from "../vertical-direction";
 import { BoxShadowManifest } from "../box-shadow";
 import { Container } from "../container";
 import { Background } from "../background";
-import type { BorderRadiusManifest, EdgeInsets } from "..";
+import type { Border, BorderRadiusManifest, EdgeInsets } from "..";
 
 /**
  * references:
@@ -51,6 +51,7 @@ export class Flex extends Container implements IFlexManifest {
         width,
         height,
         borderRadius,
+        border,
     }: {
         key?: WidgetKey;
         width?: number; //| "auto";
@@ -69,6 +70,7 @@ export class Flex extends Container implements IFlexManifest {
         padding?: EdgeInsets;
         background?: Background;
         borderRadius?: BorderRadiusManifest;
+        border?: Border;
     }) {
         super({
             key: key,
@@ -80,6 +82,7 @@ export class Flex extends Container implements IFlexManifest {
             background: background,
             boxShadow: boxShadow,
             borderRadius: borderRadius,
+            border: border,
         });
 
         this.children = children;

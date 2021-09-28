@@ -5,7 +5,7 @@ import { BoxShadowManifest } from "../box-shadow";
 import { EdgeInsets } from "../edge-insets";
 import { Background } from "../background";
 import { IFlexManifest } from "../flex/flex.manifest";
-import { BorderRadiusManifest } from "..";
+import { Border, BorderRadiusManifest } from "..";
 
 /**
  * references:
@@ -23,6 +23,7 @@ export class Column extends Flex {
             padding?: EdgeInsets;
             background?: Background;
             borderRadius?: BorderRadiusManifest;
+            border?: Border;
         }
     ) {
         super({ ...p, direction: Axis.vertical });
