@@ -2,6 +2,7 @@ import { Color } from "..";
 import { Widget, WidgetKey } from "../widget";
 
 export class VectorWidget extends Widget {
+    readonly _type = "VectorWidget";
     readonly data: string;
     readonly fill?: Color;
     constructor(p: {

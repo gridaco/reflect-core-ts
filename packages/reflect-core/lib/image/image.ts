@@ -2,6 +2,7 @@ import { ImageManifest } from ".";
 import { Widget, WidgetKey } from "../widget";
 
 export class ImageWidget extends Widget implements ImageManifest {
+    readonly _type = "ImageWidget";
     readonly src: string;
     readonly width: number;
     readonly height: number;
