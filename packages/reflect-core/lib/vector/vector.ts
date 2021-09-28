@@ -1,10 +1,11 @@
 import { Color } from "..";
+import { Background } from "../background";
 import { Widget, WidgetKey } from "../widget";
 
 export class VectorWidget extends Widget {
     readonly _type = "VectorWidget";
     readonly data: string;
-    readonly fill?: Color;
+    readonly fill?: Background;
     constructor(p: {
         key: WidgetKey;
         width: number;
@@ -14,7 +15,7 @@ export class VectorWidget extends Widget {
          * svg data
          */
         data: string;
-        fill?: Color;
+        fill?: Background;
     }) {
         super(p);
         // region general
