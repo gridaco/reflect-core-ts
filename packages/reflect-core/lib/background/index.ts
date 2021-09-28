@@ -1,5 +1,12 @@
 import type { Color } from "../color";
-import { LinearGradientManifest } from "../linear-gradient";
+import type { Gradient } from "../gradient";
 
-export type BackgroundPaintLike = Color;
+export type BackgroundPaintLike =
+    | (Color & {
+          type: "solid-color";
+      })
+    | (Gradient & {
+          type: "gradient";
+      })
+    | { type: "graphics" };
 export type Background = BackgroundPaintLike | BackgroundPaintLike[];

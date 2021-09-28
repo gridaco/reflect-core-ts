@@ -15,6 +15,7 @@ export * from "./font-style";
 export * from "./icon";
 export * from "./image";
 export * from "./linear-gradient";
+export * from "./gradient";
 export * from "./opacity";
 export * from "./offset";
 export * from "./positioned";

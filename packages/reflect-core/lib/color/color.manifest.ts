@@ -47,6 +47,11 @@ export type ValueColor = number;
 export type NamedColor = Colors;
 
 /**
+ * color that is type of object. a utility type
+ */
+export type ObjectColor = RGB | RGBA | RGBAF;
+
+/**
  * Color type alias.
  */
 export type Color = RGB | RGBA | HexColor | ValueColor | NamedColor;

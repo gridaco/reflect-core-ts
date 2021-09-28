@@ -1,5 +1,6 @@
 import type { Color } from "../color";
 import { Alignment } from "../alignment";
+import { GradientType } from "../gradient";
 
 /**
  * reflect's global linear gradient manifest
@@ -7,6 +8,7 @@ import { Alignment } from "../alignment";
  * [css#linear-gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient())
  */
 export interface LinearGradientManifest {
+    readonly _type: GradientType.LINEAR;
     /**
      * The offset at which stop 0.0 of the gradient is placed.
      */
@@ -26,7 +28,7 @@ export interface LinearGradientManifest {
 }
 
 export class LinearGradient implements LinearGradientManifest {
-    readonly _type = "LinearGradient";
+    readonly _type = GradientType.LINEAR;
 
     readonly begin: Alignment;
     readonly end: Alignment;
@@ -38,7 +40,7 @@ export class LinearGradient implements LinearGradientManifest {
         end = Alignment.centerRight,
         colors,
         stops,
-    }: {} & LinearGradientManifest) {
+    }: {} & Omit<LinearGradientManifest, "_type">) {
         this.begin = begin;
         this.end = end;
         this.colors = colors;
