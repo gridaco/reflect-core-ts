@@ -22,7 +22,9 @@ export class ClipRRect extends Widget implements ClipRRectManifest {
         borderRadius = BorderRadius.zero,
         clipBehavior = Clip.antiAlias,
         ...manifest
-    }: { key: WidgetKey } & ClipRRectManifest) {
+    }: { key: WidgetKey } & Omit<ClipRRectManifest, "clipBehavior"> & {
+            clipBehavior?: Clip;
+        }) {
         super({ key });
 
         this.borderRadius = borderRadius;
