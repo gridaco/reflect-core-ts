@@ -29,39 +29,25 @@ export interface Alignment {
 export class Alignment {
     constructor(readonly x: number, readonly y: number) {}
 
-    static get bottomCenter() {
-        return new Alignment(0.0, 1);
-    }
+    static bottomCenter = new Alignment(0.0, 1);
 
-    static get bottomLeft() {
-        return new Alignment(-1.0, 1.0);
-    }
+    static bottomLeft = new Alignment(-1.0, 1.0);
 
-    static get bottomRight() {
-        return new Alignment(1.0, 1.0);
-    }
+    static bottomRight = new Alignment(1.0, 1.0);
 
-    static get center() {
-        return new Alignment(0.0, 0.0);
-    }
+    static center = new Alignment(0.0, 0.0);
 
-    static get centerLeft() {
-        return new Alignment(-1.0, 0.0);
-    }
+    static centerLeft = new Alignment(-1.0, 0.0);
 
-    static get centerRight() {
-        return new Alignment(1.0, 0.0);
-    }
+    static centerRight = new Alignment(1.0, 0.0);
 
-    static get topCenter() {
-        return new Alignment(0.0, -1.0);
-    }
+    static topCenter = new Alignment(0.0, -1.0);
 
-    static get topLeft() {
-        return new Alignment(-1.0, -1.0);
-    }
+    static topLeft = new Alignment(-1.0, -1.0);
 
-    static get topRight() {
-        return new Alignment(1.0, -1.0);
+    static topRight = new Alignment(1.0, -1.0);
+
+    public equals(b: Alignment) {
+        return this.x === b.x && this.y === b.y;
     }
 }
