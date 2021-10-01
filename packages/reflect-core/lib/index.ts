@@ -7,6 +7,7 @@ export * from "./border-radius";
 export * from "./border-side";
 export * from "./box-shadow";
 export * from "./box-shape";
+export * from "./blurred";
 export * from "./container";
 export * from "./circle-border";
 export * from "./clip";
