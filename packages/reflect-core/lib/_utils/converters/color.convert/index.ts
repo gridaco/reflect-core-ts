@@ -55,7 +55,9 @@ export function convertReflectColorToUniversal(
         }
     }
 
-    throw `reflect#color#convert: the givven color ${color} is not currently supported for coversion. is it in a valid hex value or RGB/RGBA format?`;
+    throw `reflect#color#convert: the givven color ${JSON.stringify(
+        color
+    )} is not currently supported for coversion. is it in a valid hex value or RGB/RGBA format?`;
 }
 
 export function rgbTo6hex(
