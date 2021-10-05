@@ -34,6 +34,7 @@ export * from "./edge-insets";
 export * from "./vector";
 export * from "./single-child-scroll-view";
 export * from "./rounded-rectangle-border";
+export * from "./rotation";
 
 // core color
 export * from "./color"; /** It's also exported as color below. (remove this comment if this statement is no longer valid.)*/
