@@ -30,6 +30,18 @@ export type Operation = {
     right: DimensionLength;
 };
 
+export interface IContainerInitializerProps {
+    children: Widget[] | Widget;
+    boxShadow?: BoxShadowManifest;
+    width?: number;
+    height?: number;
+    margin?: EdgeInsets;
+    padding?: EdgeInsets;
+    background?: Background;
+    border?: Border;
+    borderRadius?: BorderRadiusManifest;
+}
+
 /**
  * Container, a node equivalant.
  */
@@ -75,16 +87,7 @@ export class Container extends Widget {
         height,
     }: {
         key: WidgetKey;
-        children: Widget[] | Widget;
-        boxShadow?: BoxShadowManifest;
-        width?: number;
-        height?: number;
-        margin?: EdgeInsets;
-        padding?: EdgeInsets;
-        background?: Background;
-        border?: Border;
-        borderRadius?: BorderRadiusManifest;
-    }) {
+    } & IContainerInitializerProps) {
         super({
             key: key,
         });

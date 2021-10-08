@@ -2,11 +2,10 @@ import type { WidgetKey } from "../widget";
 import { Widget } from "../widget";
 import { Clip } from "../clip";
 import { VerticalDirection } from "../vertical-direction";
-import { Flex } from "../flex";
 import { Axis } from "../axis";
-import { CrossAxisAlignment } from "../cross-axis-alignment";
 import { WrapAlignment } from "../wrap-alignment";
 import { WrapCrossAlignment } from "../wrap-cross-alignment";
+import { Container, IContainerInitializerProps } from "../container";
 
 interface IWrapManifest {
     direction: Axis;
@@ -27,9 +26,8 @@ interface IWrapManifest {
  *
  * [css#flex-wrap](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap)
  */
-export class Wrap extends Widget implements IWrapManifest {
+export class Wrap extends Container implements IWrapManifest {
     readonly _type = "Wrap";
-    readonly key?: WidgetKey;
 
     direction: Axis;
     alignment: WrapAlignment;
@@ -54,7 +52,8 @@ export class Wrap extends Widget implements IWrapManifest {
         verticalDirection = VerticalDirection.down,
         clipBehavior = Clip.none,
         children = [],
-    }: { key?: WidgetKey; children: Widget[] } & {
+        ...container_initializer
+    }: { key: WidgetKey; children: Widget[] } & {
         direction?: Axis;
         alignment?: WrapAlignment;
         spacing?: number;
@@ -65,8 +64,8 @@ export class Wrap extends Widget implements IWrapManifest {
         verticalDirection?: VerticalDirection;
         clipBehavior?: Clip;
         children?: Widget[];
-    }) {
-        super({ key });
+    } & IContainerInitializerProps) {
+        super({ key, ...container_initializer, children: children });
 
         this.direction = direction;
         this.alignment = alignment;
