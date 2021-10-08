@@ -54,7 +54,18 @@ export class Wrap extends Widget implements IWrapManifest {
         verticalDirection = VerticalDirection.down,
         clipBehavior = Clip.none,
         children = [],
-    }: { key?: WidgetKey; children: Widget[] } & IWrapManifest) {
+    }: { key?: WidgetKey; children: Widget[] } & {
+        direction?: Axis;
+        alignment?: WrapAlignment;
+        spacing?: number;
+        runAlignment?: WrapAlignment;
+        runSpacing?: number;
+        crossAxisAlignment?: WrapCrossAlignment;
+        // textDirection: TextDirection
+        verticalDirection?: VerticalDirection;
+        clipBehavior?: Clip;
+        children?: Widget[];
+    }) {
         super({ key });
 
         this.direction = direction;
