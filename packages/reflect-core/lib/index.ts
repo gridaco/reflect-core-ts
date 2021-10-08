@@ -1,5 +1,6 @@
 export * from "./widget";
-
+//
+export * from "./axis";
 export * from "./alignment";
 export * from "./button";
 export * from "./border";
@@ -13,6 +14,7 @@ export * from "./circle-border";
 export * from "./clip";
 export * from "./clip-rrect";
 export * from "./clip-path";
+export * from "./cross-axis-alignment";
 export * from "./divider";
 export * from "./font-weight";
 export * from "./font-style";
@@ -35,6 +37,11 @@ export * from "./vector";
 export * from "./single-child-scroll-view";
 export * from "./rounded-rectangle-border";
 export * from "./rotation";
+export * from "./vertical-direction";
+export * from "./main-axis-size";
+export * from "./main-axis-alignment";
+export * from "./wrap-alignment";
+export * from "./wrap-cross-alignment";
 
 // core color
 export * from "./color"; /** It's also exported as color below. (remove this comment if this statement is no longer valid.)*/
@@ -46,16 +53,9 @@ export * from "./flex";
 export * from "./row";
 export * from "./column";
 export * from "./stack";
-export * from "./main-axis-alignment";
-export * from "./main-axis-size";
-// endregion layouts
+export * from "./wrap";
 
-// region axis
-export * from "./axis";
-export * from "./cross-axis-alignment";
-export * from "./main-axis-alignment";
-export * from "./vertical-direction";
-// endregion axis
+// endregion layouts
 
 export * as cg from "./cg";
 export * as cgr from "./cgr";

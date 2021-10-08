@@ -16,7 +16,7 @@ import type { Border, BorderRadiusManifest, EdgeInsets } from "..";
  * [flutter#flex](https://api.flutter.dev/flutter/widgets/Flex-class.html)
  */
 export class Flex extends Container implements IFlexManifest {
-    readonly _type: "Flex" | "Column" | "Row" = "Flex";
+    readonly _type: "Flex" | "Column" | "Row" | "Wrap" = "Flex";
     children: Widget[];
     crossAxisAlignment: CrossAxisAlignment;
     direction: Axis;
