@@ -24,6 +24,10 @@ export class IconWidget<T = IconData>
 
         this.icon = icon;
         this.size = size;
+        // explicitly set w & h
+        // note! - when you remove these two initializer in the future, note that some resizer uses w & h value so that this icon will loose size on render.
+        this.width = size;
+        this.height = size;
         this.color = color;
         this.semanticLabel = semanticLabel;
     }
