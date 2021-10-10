@@ -35,6 +35,7 @@ export * from "./rect";
 export * from "./radius";
 export * from "./edge-insets";
 export * from "./vector";
+export * from "./sized-box";
 export * from "./single-child-scroll-view";
 export * from "./rounded-rectangle-border";
 export * from "./rotation";
