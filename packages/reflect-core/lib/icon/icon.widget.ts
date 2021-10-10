@@ -2,6 +2,7 @@ import { IconManifest } from "./icon.manifest";
 import { Widget, WidgetKey } from "../widget";
 import { Color } from "../color";
 import { IconData } from ".";
+import assert from "assert";
 
 export class IconWidget<T = IconData>
     extends Widget
@@ -14,11 +15,12 @@ export class IconWidget<T = IconData>
     constructor({
         key,
         icon,
-        size,
+        size = 24,
         color,
         semanticLabel,
     }: { key: WidgetKey } & IconManifest<T>) {
         super({ key });
+        assert(icon, "icon is required");
 
         this.icon = icon;
         this.size = size;
