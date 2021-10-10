@@ -24,6 +24,7 @@ export * from "./linear-gradient";
 export * from "./gradient";
 export * from "./opacity";
 export * from "./offset";
+export * from "./overflow-box";
 export * from "./positioned";
 export * from "./text";
 export * from "./text-style";
