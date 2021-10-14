@@ -5,6 +5,8 @@ import { BoxShape } from "../box-shape";
 import { BorderRadiusManifest, EdgeInsets } from "../";
 import { Widget, WidgetKey } from "../widget";
 
+export type DimensionLetterSpacing = number | `${number}%`;
+
 export type DimensionLength =
     | number
     | Calculation
