@@ -14,7 +14,7 @@ export class TextStyle implements ITextStyle {
     decoration: TextDecoration;
     decorationStyle?: TextDecorationStyle;
     decorationThickness?: number;
-    letterSpacing: number;
+    letterSpacing: DimensionLength;
     wordSpacing?: number;
     lineHeight: DimensionLength;
 
