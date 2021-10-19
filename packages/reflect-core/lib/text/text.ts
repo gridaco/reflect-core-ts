@@ -2,13 +2,14 @@ import { TextAlign } from "../text-align";
 import { TextOverflow } from "../text-overflow";
 import { ITextStyle } from "../text-style";
 import { Widget, WidgetKey } from "../widget";
+// import { TextManifest } from "./text.manifest";
 
 export class Text extends Widget {
     readonly _type: "Text" = "Text";
-    data: string;
-    overflow: TextOverflow;
-    style: ITextStyle;
-    alignment: TextAlign;
+    readonly data: string;
+    readonly overflow: TextOverflow;
+    readonly style: ITextStyle;
+    readonly textAlign: TextAlign;
     width?: number;
     height?: number;
 
@@ -17,7 +18,7 @@ export class Text extends Widget {
         data,
         overflow = TextOverflow.ellipsis,
         style,
-        alignment,
+        textAlign,
         width,
         height,
     }: {
@@ -25,7 +26,7 @@ export class Text extends Widget {
         data: string;
         overflow?: TextOverflow;
         style: ITextStyle;
-        alignment: TextAlign;
+        textAlign: TextAlign;
         width?: number;
         height?: number;
     }) {
@@ -33,7 +34,7 @@ export class Text extends Widget {
         this.data = data;
         this.overflow = overflow;
         this.style = style;
-        this.alignment = alignment;
+        this.textAlign = textAlign;
         this.width = width;
         this.height = height;
     }
