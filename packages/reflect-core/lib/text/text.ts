@@ -47,7 +47,7 @@ export class Text extends Widget implements TextManifest {
     }
 }
 
-export class RenderedText extends Widget implements RenderedTextManifest {
+export class RenderedText extends Text implements RenderedTextManifest {
     // #region text manifest
     readonly _type: "Text" = "Text";
     readonly data: Rendered<string>;
@@ -77,12 +77,14 @@ export class RenderedText extends Widget implements RenderedTextManifest {
     } & Omit<RenderedTextManifest, "overflow"> & {
             overflow?: TextOverflow;
         }) {
-        super({ key: key });
-        this.data = data;
-        this.overflow = overflow;
-        this.style = style;
-        this.textAlign = textAlign;
-        this.maxLines = maxLines;
+        super({
+            key: key,
+            data,
+            overflow,
+            style,
+            textAlign,
+            maxLines,
+        });
 
         this.width = width;
         this.height = height;
