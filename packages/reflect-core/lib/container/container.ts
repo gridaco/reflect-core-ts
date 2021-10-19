@@ -1,3 +1,4 @@
+import { LetterSpacing } from "@design-sdk/figma-types";
 import { Background } from "../background";
 import { Border } from "../border";
 import { BoxShadowManifest } from "../box-shadow";
@@ -5,7 +6,11 @@ import { BoxShape } from "../box-shape";
 import { BorderRadiusManifest, EdgeInsets } from "../";
 import { Widget, WidgetKey } from "../widget";
 
-export type DimensionLetterSpacing = number | `${number}%`;
+/**
+ * A collection of values ​​with units.
+ * When handling by unit, the corresponding type is used.
+ */
+export type Dimension = LetterSpacing;
 
 export type DimensionLength =
     | number
