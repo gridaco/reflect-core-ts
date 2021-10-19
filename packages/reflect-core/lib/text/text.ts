@@ -31,7 +31,9 @@ export class Text extends Widget implements TextManifest {
         key: WidgetKey;
         width?: number;
         height?: number;
-    } & TextManifest) {
+    } & Omit<TextManifest, "overflow"> & {
+            overflow?: TextOverflow;
+        }) {
         super({ key: key });
         this.data = data;
         this.overflow = overflow;
