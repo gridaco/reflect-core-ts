@@ -1,11 +1,10 @@
 import assert from "assert";
-import { Widget, WidgetKey } from "../widget";
+import { SingleChildRenderObjectWidget, Widget, WidgetKey } from "../widget";
 import { BlurEffect } from "../cgr";
 
-export class Blurred extends Widget {
+export class Blurred extends SingleChildRenderObjectWidget {
     readonly _type = "Blurred";
     readonly blur: BlurEffect;
-    readonly child?: Widget;
 
     constructor({
         key,
@@ -16,9 +15,8 @@ export class Blurred extends Widget {
         blur: BlurEffect;
         child: Widget;
     }) {
-        super({ key });
+        super({ key, child });
         assert(typeof blur, "blur is required");
         this.blur = blur;
-        this.child = child;
     }
 }

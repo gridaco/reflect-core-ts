@@ -48,7 +48,6 @@ export interface ISingleChildRenderObjectWidget {
 export class SingleChildRenderObjectWidget
     extends RenderObjectWidget
     implements ISingleChildRenderObjectWidget {
-    readonly key?: WidgetKeyLike;
     readonly child?: Widget;
     constructor({ key, child }: { key?: WidgetKeyLike; child?: Widget }) {
         super({ key });

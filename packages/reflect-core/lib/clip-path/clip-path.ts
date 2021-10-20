@@ -1,5 +1,5 @@
 import { Clip } from "../clip";
-import { Widget, WidgetKey } from "../widget";
+import { SingleChildRenderObjectWidget, Widget, WidgetKey } from "../widget";
 
 type PathClipper = {
     type: "path";
@@ -19,23 +19,24 @@ export interface ClipPathManifest {
 /**
  * [Flutter#ClipPath](https://api.flutter.dev/flutter/widgets/ClipPath-class.html)
  */
-export class ClipPath extends Widget implements ClipPathManifest {
+export class ClipPath
+    extends SingleChildRenderObjectWidget
+    implements ClipPathManifest {
     readonly _type = "ClipPath";
     clipBehavior: Clip;
-    child?: Widget;
     clipper: Clipper;
 
     constructor({
         key,
         clipBehavior = Clip.antiAlias,
+        child,
         ...manifest
     }: { key: WidgetKey } & Omit<ClipPathManifest, "clipBehavior"> & {
             clipBehavior?: Clip;
         }) {
-        super({ key });
+        super({ key, child: child });
 
         this.clipBehavior = clipBehavior;
         this.clipper = manifest.clipper;
-        this.child = manifest.child;
     }
 }

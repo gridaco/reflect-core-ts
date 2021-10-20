@@ -16,7 +16,6 @@ import { SingleChildRenderObjectWidget, Widget, WidgetKey } from "../widget";
 export class Opacity extends SingleChildRenderObjectWidget {
     readonly _type = "Opacity";
     readonly opacity: number;
-    readonly child?: Widget;
     constructor({
         key,
         opacity,
@@ -29,6 +28,5 @@ export class Opacity extends SingleChildRenderObjectWidget {
         super({ key, child });
         assert(typeof opacity, "opacity is required");
         this.opacity = opacity;
-        this.child = child;
     }
 }

@@ -17,20 +17,19 @@ export class ClipRRect
     readonly _type = "ClipRRect";
     borderRadius?: BorderRadius;
     clipBehavior: Clip;
-    child?: Widget;
 
     constructor({
         key,
         borderRadius = BorderRadius.zero,
         clipBehavior = Clip.antiAlias,
+        child,
         ...manifest
     }: { key: WidgetKey } & Omit<ClipRRectManifest, "clipBehavior"> & {
             clipBehavior?: Clip;
         }) {
-        super({ key, child: manifest.child });
+        super({ key, child: child });
 
         this.borderRadius = borderRadius;
         this.clipBehavior = clipBehavior;
-        this.child = manifest.child;
     }
 }

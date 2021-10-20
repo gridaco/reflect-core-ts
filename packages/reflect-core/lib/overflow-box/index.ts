@@ -1,4 +1,4 @@
-import { Widget, WidgetKey } from "../widget";
+import { SingleChildRenderObjectWidget, Widget, WidgetKey } from "../widget";
 
 /**
  * A widget that imposes different constraints on its child than it gets from its parent, possibly allowing the child to overflow the parent.
@@ -12,10 +12,8 @@ import { Widget, WidgetKey } from "../widget";
  *
  * [css#overflow](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow)
  */
-export class OverflowBox extends Widget {
-    child: Widget;
+export class OverflowBox extends SingleChildRenderObjectWidget {
     constructor({ key, child }: { key: WidgetKey } & { child: Widget }) {
-        super({ key });
-        this.child = child;
+        super({ key, child });
     }
 }
