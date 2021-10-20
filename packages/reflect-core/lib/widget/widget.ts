@@ -30,13 +30,15 @@ export class Widget {
     readonly _type: string;
     readonly key?: WidgetKeyLike;
 
-    constructor(p?: { key: WidgetKeyLike }) {
-        this.key = p?.key;
+    constructor({ key }: { key: WidgetKeyLike }) {
+        this.key = key;
     }
 }
 
 export class RenderObjectWidget extends Widget {
-    readonly key?: WidgetKeyLike;
+    constructor({ key }: { key: WidgetKeyLike }) {
+        super({ key });
+    }
 }
 
 export interface ISingleChildRenderObjectWidget {
@@ -61,7 +63,6 @@ export interface IMultiChildRenderObjectWidget {
 export class MultiChildRenderObjectWidget
     extends RenderObjectWidget
     implements IMultiChildRenderObjectWidget {
-    readonly key?: WidgetKeyLike;
     readonly children: Array<Widget>;
     constructor({
         key,
@@ -70,7 +71,7 @@ export class MultiChildRenderObjectWidget
         key?: WidgetKeyLike;
         children: Array<Widget>;
     }) {
-        super({ key });
+        super({ key: key });
         this.children = children;
     }
 }
