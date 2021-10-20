@@ -1,6 +1,7 @@
 import { TextAlignManifest, TextAlignVerticalManifest } from "../text-align";
 import { TextOverflowManifest } from "../text-overflow/text-overflow.manifest";
 import { TextStyleManifest } from "../text-style";
+import { Dynamic, Rendered } from "../_utility-types";
 
 /**
  * Defines only properties without types
@@ -17,24 +18,50 @@ export interface ITextPropertyFields {
  * [flutter docs](https://api.flutter.dev/flutter/widgets/Text-class.html)
  */
 export interface TextManifest extends ITextPropertyFields {
-    data: string;
-    style: TextStyleManifest;
-    overflow: TextOverflowManifest;
+    data: Dynamic<string>;
+    style: Dynamic<TextStyleManifest>;
+    overflow: Dynamic<TextOverflowManifest>;
 
     /**
      * - [flutter Text#textAlign](https://api.flutter.dev/flutter/widgets/Text/textAlign.html)
      * - [css#text-align](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align)
      */
-    textAlign: TextAlignManifest;
+    textAlign: Dynamic<TextAlignManifest>;
 
     /**
      * this is not a default css nor flutter's text property, but this field exists on figma or other design-first tools.
      * @nonstandard
      */
-    textAlignVertical?: TextAlignVerticalManifest;
+    textAlignVertical?: Dynamic<TextAlignVerticalManifest>;
 
     /**
      * this is not supported with css standard [related link here](https://stackoverflow.com/questions/55487695/react-native-text-component-using-number-of-lines)
      */
-    maxLines?: number;
+    maxLines?: Dynamic<number>;
+}
+
+/**
+ * [flutter docs](https://api.flutter.dev/flutter/widgets/Text-class.html)
+ */
+export interface RenderedTextManifest extends TextManifest {
+    data: Rendered<string>;
+    style: Rendered<TextStyleManifest>;
+    overflow: Rendered<TextOverflowManifest>;
+
+    /**
+     * - [flutter Text#textAlign](https://api.flutter.dev/flutter/widgets/Text/textAlign.html)
+     * - [css#text-align](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align)
+     */
+    textAlign: Rendered<TextAlignManifest>;
+
+    /**
+     * this is not a default css nor flutter's text property, but this field exists on figma or other design-first tools.
+     * @nonstandard
+     */
+    textAlignVertical?: Rendered<TextAlignVerticalManifest>;
+
+    /**
+     * this is not supported with css standard [related link here](https://stackoverflow.com/questions/55487695/react-native-text-component-using-number-of-lines)
+     */
+    maxLines?: Rendered<number>;
 }
