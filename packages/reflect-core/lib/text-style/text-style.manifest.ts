@@ -1,5 +1,5 @@
 import { LetterSpacing } from "@design-sdk/figma-types";
-import { DimensionLength } from "..";
+import { DimensionLength, TextShadowManifest } from "..";
 import { ColorManifest } from "../color";
 import { FontStyleManifest } from "../font-style";
 import { FontWeightManifest } from "../font-weight";
@@ -61,6 +61,8 @@ export interface ITextStyle {
      */
     lineHeight?: DimensionLength;
     // endregion spacing related
+
+    textShadow?: TextShadowManifest[];
 }
 
 export interface TextStyleManifest extends ITextStyle {

@@ -28,6 +28,7 @@ export * from "./overflow-box";
 export * from "./positioned";
 export * from "./text";
 export * from "./text-style";
+export * from "./text-shadow";
 export * from "./text-align";
 export * from "./text-decoration";
 export * from "./text-overflow";
