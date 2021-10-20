@@ -1,16 +1,21 @@
 import { IconManifest } from "./icon.manifest";
-import { Widget, WidgetKey } from "../widget";
+import { IWHStyleWidget, Widget, WidgetKey } from "../widget";
 import { Color } from "../color";
 import { IconData } from ".";
 import assert from "assert";
 
 export class IconWidget<T = IconData>
     extends Widget
-    implements IconManifest<T> {
+    implements IconManifest<T>, IWHStyleWidget {
     readonly icon: T;
     readonly size: number;
     readonly color: Color;
     readonly semanticLabel?: string;
+
+    // This will be removed in the future. IconWidget does not need to implement IWHStyleWidget.
+    // IWHStyleWidget
+    readonly width: number;
+    readonly height: number;
 
     constructor({
         key,

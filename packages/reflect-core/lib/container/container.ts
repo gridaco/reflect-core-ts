@@ -1,44 +1,11 @@
-import { LetterSpacing } from "@design-sdk/figma-types";
 import { Background } from "../background";
 import { Border } from "../border";
 import { BoxShadowManifest } from "../box-shadow";
 import { BoxShape } from "../box-shape";
-import { BorderRadiusManifest, EdgeInsets } from "../";
-import { Widget, WidgetKey } from "../widget";
-
-/**
- * A collection of values ​​with units.
- * When handling by unit, the corresponding type is used.
- */
-export type Dimension = LetterSpacing;
-
-export type DimensionLength =
-    | number
-    | Calculation
-    | `${number}%`
-    | `${number}vh`
-    | `${number}vw`
-    /**
-     * css - 100vh / 100vw
-     * dart - X / double.infinity
-     */
-    | "match-screen-size";
-
-export type Calculation = {
-    type: "calc";
-    operations: Operations | Operation;
-};
-
-export type Operations = Array<Operation>;
-export type Operation = {
-    type: "op";
-    op: "+" | "-" | "*" | "/";
-    left: DimensionLength;
-    right: DimensionLength;
-};
+import type { BorderRadiusManifest, DimensionLength, EdgeInsets } from "../";
+import { DefaultStyleWidget, WidgetKey } from "../widget";
 
 export interface IContainerInitializerProps {
-    children: Widget[] | Widget;
     boxShadow?: BoxShadowManifest;
     width?: number;
     height?: number;
@@ -52,7 +19,7 @@ export interface IContainerInitializerProps {
 /**
  * Container, a node equivalant.
  */
-export class Container extends Widget {
+export class Container extends DefaultStyleWidget {
     _type = "Container";
 
     /**
@@ -83,7 +50,6 @@ export class Container extends Widget {
 
     constructor({
         key = undefined,
-        children,
         margin,
         padding,
         background,
@@ -99,7 +65,6 @@ export class Container extends Widget {
             key: key,
         });
 
-        this.children = children;
         this.boxShadow = boxShadow;
         this.margin = margin;
         this.padding = padding;

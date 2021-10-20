@@ -1,4 +1,8 @@
-import { Widget, WidgetKey } from "../widget";
+import {
+    DefaultStyleMultiChildRenderObjectWidget,
+    Widget,
+    WidgetKey,
+} from "../widget";
 import { Axis } from "../axis";
 import { CrossAxisAlignment } from "../cross-axis-alignment";
 import { IFlexManifest } from "./flex.manifest";
@@ -6,7 +10,6 @@ import { MainAxisAlignment } from "../main-axis-alignment";
 import { MainAxisSize } from "../main-axis-size";
 import { VerticalDirection } from "../vertical-direction";
 import { BoxShadowManifest } from "../box-shadow";
-import { Container } from "../container";
 import { Background } from "../background";
 import type { Border, BorderRadiusManifest, EdgeInsets } from "..";
 
@@ -15,7 +18,9 @@ import type { Border, BorderRadiusManifest, EdgeInsets } from "..";
  *
  * [flutter#flex](https://api.flutter.dev/flutter/widgets/Flex-class.html)
  */
-export class Flex extends Container implements IFlexManifest {
+export class Flex
+    extends DefaultStyleMultiChildRenderObjectWidget
+    implements IFlexManifest {
     readonly _type: "Flex" | "Column" | "Row" | "Wrap" = "Flex";
     children: Widget[];
     crossAxisAlignment: CrossAxisAlignment;
@@ -74,9 +79,9 @@ export class Flex extends Container implements IFlexManifest {
     }) {
         super({
             key: key,
+            children: children,
             width: width,
             height: height,
-            children: children,
             margin: margin,
             padding: padding,
             background: background,

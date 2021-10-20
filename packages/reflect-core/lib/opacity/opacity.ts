@@ -1,5 +1,5 @@
 import assert from "assert";
-import { Widget, WidgetKey } from "../widget";
+import { SingleChildRenderObjectWidget, Widget, WidgetKey } from "../widget";
 
 /**
  * Universal opacity interface
@@ -13,7 +13,7 @@ import { Widget, WidgetKey } from "../widget";
  *
  * [konva#Rect.opacity](https://konvajs.org/api/Konva.Rect.html)
  */
-export class Opacity extends Widget {
+export class Opacity extends SingleChildRenderObjectWidget {
     readonly _type = "Opacity";
     readonly opacity: number;
     readonly child?: Widget;
@@ -26,7 +26,7 @@ export class Opacity extends Widget {
         opacity: number;
         child: Widget;
     }) {
-        super({ key });
+        super({ key, child });
         assert(typeof opacity, "opacity is required");
         this.opacity = opacity;
         this.child = child;

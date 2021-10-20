@@ -1,11 +1,11 @@
-import type { WidgetKey } from "../widget";
+import { MultiChildRenderObjectWidget, WidgetKey } from "../widget";
 import { Widget } from "../widget";
 import { Clip } from "../clip";
 import { VerticalDirection } from "../vertical-direction";
 import { Axis } from "../axis";
 import { WrapAlignment } from "../wrap-alignment";
 import { WrapCrossAlignment } from "../wrap-cross-alignment";
-import { Container, IContainerInitializerProps } from "../container";
+import { IContainerInitializerProps } from "../container";
 
 interface IWrapManifest {
     direction: Axis;
@@ -26,7 +26,9 @@ interface IWrapManifest {
  *
  * [css#flex-wrap](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap)
  */
-export class Wrap extends Container implements IWrapManifest {
+export class Wrap
+    extends MultiChildRenderObjectWidget
+    implements IWrapManifest {
     readonly _type = "Wrap";
 
     direction: Axis;

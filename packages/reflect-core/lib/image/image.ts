@@ -1,7 +1,7 @@
 import { ImageManifest } from ".";
-import { Widget, WidgetKey } from "../widget";
+import { DefaultStyleWidget, WidgetKey } from "../widget";
 
-export class ImageWidget extends Widget implements ImageManifest {
+export class ImageWidget extends DefaultStyleWidget implements ImageManifest {
     readonly _type = "ImageWidget";
     readonly src: string;
     readonly width: number;

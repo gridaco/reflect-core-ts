@@ -1,8 +1,7 @@
-import { Color } from "..";
 import { Background } from "../background";
-import { Widget, WidgetKey } from "../widget";
+import { DefaultStyleWidget, WidgetKey } from "../widget";
 
-export class VectorWidget extends Widget {
+export class VectorWidget extends DefaultStyleWidget {
     readonly _type = "VectorWidget";
     readonly data: string;
     readonly fill?: Background;

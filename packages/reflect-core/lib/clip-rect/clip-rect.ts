@@ -1,11 +1,13 @@
-import { Widget, WidgetKey } from "../widget";
+import { SingleChildRenderObjectWidget, Widget, WidgetKey } from "../widget";
 
 interface ClipRectManifest {}
 
 /**
  * @deprecated - not ready
  */
-export class ClipRect extends Widget implements ClipRectManifest {
+export class ClipRect
+    extends SingleChildRenderObjectWidget
+    implements ClipRectManifest {
     constructor({
         key,
         ...manifest
