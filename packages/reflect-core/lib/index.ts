@@ -32,6 +32,7 @@ export * from "./text-shadow";
 export * from "./text-align";
 export * from "./text-decoration";
 export * from "./text-overflow";
+export * from "./text-shadow";
 export * from "./rect";
 export * from "./radius";
 export * from "./edge-insets";
