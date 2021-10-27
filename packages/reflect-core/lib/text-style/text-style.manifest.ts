@@ -1,5 +1,4 @@
 import type { DimensionLength } from "..";
-import type { TextShadowManifest } from "../text-shadow";
 import type { ColorManifest } from "../color";
 import type { FontStyleManifest } from "../font-style";
 import type { FontWeightManifest } from "../font-weight";
@@ -61,8 +60,6 @@ export interface ITextStyle {
      */
     lineHeight?: DimensionLength;
     // endregion spacing related
-
-    textShadow?: TextShadowManifest[];
 }
 
 export interface TextStyleManifest extends ITextStyle {
