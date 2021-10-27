@@ -5,13 +5,17 @@ import { MainAxisAlignment } from "../main-axis-alignment";
 import { MainAxisSize } from "../main-axis-size";
 import { VerticalDirection } from "../vertical-direction";
 
-export interface IFlexManifest {
-    children: Widget[];
-    crossAxisAlignment: CrossAxisAlignment;
+export interface IFlexManifest<T = Widget> {
+    children: T[];
     direction: Axis;
-    verticalDirection: VerticalDirection;
-    mainAxisAlignment: MainAxisAlignment;
-    mainAxisSize: MainAxisSize;
+    crossAxisAlignment?: CrossAxisAlignment;
+    verticalDirection?: VerticalDirection;
+    mainAxisAlignment?: MainAxisAlignment;
+    mainAxisSize?: MainAxisSize;
+    flex?: number;
+    itemSpacing?: number;
+    width?: number;
+    height?: number;
 }
 
 export type FlexManifest = IFlexManifest;

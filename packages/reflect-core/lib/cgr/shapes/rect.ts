@@ -1,5 +1,5 @@
 import { cgrmixin } from "..";
-import { BorderRadiusManifest } from "../../ui/border-radius";
+import type { BorderRadiusManifest } from "../../";
 
 export interface Rect
     extends cgrmixin.DefaultShapeMixin,

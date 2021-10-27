@@ -1,3 +1,5 @@
+import { LetterSpacing } from "@design-sdk/figma-types";
+import { DimensionLength, TextShadowManifest } from "..";
 import { ColorManifest } from "../color";
 import { FontStyleManifest } from "../font-style";
 import { FontWeightManifest } from "../font-weight";
@@ -44,7 +46,7 @@ export interface ITextStyle {
      * css: https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing
      * flutter: https://api.flutter.dev/flutter/painting/TextStyle/letterSpacing.html
      */
-    letterSpacing?: number; // todo - number to letter spacing (em or other css property supported type)
+    letterSpacing?: LetterSpacing;
 
     /**
      * css: https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing
@@ -57,8 +59,10 @@ export interface ITextStyle {
      *
      * [css line-hgithg](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height)
      */
-    lineHeight?: number;
+    lineHeight?: DimensionLength;
     // endregion spacing related
+
+    textShadow?: TextShadowManifest[];
 }
 
 export interface TextStyleManifest extends ITextStyle {
