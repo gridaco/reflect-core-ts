@@ -1,4 +1,3 @@
-import { LetterSpacing } from "@design-sdk/figma-types";
 import { DimensionLength } from "..";
 import { Color, Colors } from "../color";
 import { FontStyle } from "../font-style";
@@ -15,7 +14,7 @@ export class TextStyle implements ITextStyle {
     decoration: TextDecoration;
     decorationStyle?: TextDecorationStyle;
     decorationThickness?: number;
-    letterSpacing: LetterSpacing;
+    letterSpacing: DimensionLength;
     wordSpacing?: number;
     lineHeight: DimensionLength;
 
