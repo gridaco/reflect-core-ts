@@ -1,17 +1,53 @@
 export * from "./widget";
-export * from "./container";
+//
+export * from "./axis";
+export * from "./alignment";
 export * from "./button";
+export * from "./border";
+export * from "./border-radius";
+export * from "./border-side";
+export * from "./box-shadow";
+export * from "./box-shape";
+export * from "./blurred";
+export * from "./container";
+export * from "./circle-border";
+export * from "./clip";
+export * from "./clip-rrect";
+export * from "./clip-path";
+export * from "./cross-axis-alignment";
+export * from "./divider";
+export * from "./font-weight";
+export * from "./font-style";
+export * from "./icon";
+export * from "./image";
+export * from "./linear-gradient";
+export * from "./gradient";
+export * from "./opacity";
+export * from "./offset";
+export * from "./overflow-box";
+export * from "./positioned";
 export * from "./text";
 export * from "./text-style";
 export * from "./text-align";
 export * from "./text-decoration";
-export * from "./icon";
-export * from "./font-weight";
-export * from "./font-style";
+export * from "./text-overflow";
 export * from "./rect";
-export * from "./ui";
-export * from "./image";
+export * from "./radius";
+export * from "./edge-insets";
 export * from "./vector";
+export * from "./sized-box";
+export * from "./single-child-scroll-view";
+export * from "./rounded-rectangle-border";
+export * from "./rotation";
+export * from "./vertical-direction";
+export * from "./main-axis-size";
+export * from "./main-axis-alignment";
+export * from "./wrap-alignment";
+export * from "./wrap-cross-alignment";
+
+// core color
+export * from "./color"; /** It's also exported as color below. (remove this comment if this statement is no longer valid.)*/
+//
 
 // region layouts
 export * from "./layouts";
@@ -19,15 +55,14 @@ export * from "./flex";
 export * from "./row";
 export * from "./column";
 export * from "./stack";
+export * from "./wrap";
+
 // endregion layouts
 
-// region axis
-export * from "./axis";
-export * from "./cross-axis-alignment";
-export * from "./main-axis-alignment";
-export * from "./vertical-direction";
-// endregion axis
+// length
+export * from "./length";
 
+// super core
 export * as cg from "./cg";
 export * as cgr from "./cgr";
 export * as color from "./color";

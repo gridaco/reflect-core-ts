@@ -46,7 +46,7 @@ type BlendMode =
     | "LUMINOSITY";
  * ```
  */
-export declare enum BlendMode {
+export enum BlendMode {
     Normal = "Normal",
     Darken = "Darken",
     Multiply = "Multiply",

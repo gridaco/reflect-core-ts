@@ -1,6 +1,6 @@
 import { BoxShadowManifest } from "../box-shadow";
 import { Color } from "../color";
-import { BorderRadiusManifest } from "../ui/border-radius";
+import type { BorderRadiusManifest } from "..";
 
 /**
  * reflect's standard core graphics rectangle contains border radius, fill, and more.

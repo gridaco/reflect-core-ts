@@ -1,15 +1,20 @@
-import { BackgroundPaintLike } from "../background";
+import { Background } from "../background";
 import { BoxShadowManifest } from "../box-shadow";
-import { Container } from "../container";
-import { EdgeInsets } from "../ui";
-import { Widget, WidgetKey } from "../widget";
+import type { Border, BorderRadiusManifest, Clip, EdgeInsets } from "..";
+import {
+    DefaultStyleMultiChildRenderObjectWidget,
+    Widget,
+    WidgetKey,
+} from "../widget";
 
-export class Stack extends Container {
+export class Stack extends DefaultStyleMultiChildRenderObjectWidget {
     readonly _type: "Stack" = "Stack";
 
     width: number;
     height: number;
     boxShadow?: BoxShadowManifest;
+    clipBehavior?: Clip;
+    children: Widget[];
 
     constructor(p: {
         key: WidgetKey;
@@ -17,13 +22,18 @@ export class Stack extends Container {
         width: number;
         height: number;
         boxShadow?: BoxShadowManifest;
+        borderRadius?: BorderRadiusManifest;
+        border?: Border;
         margin?: EdgeInsets;
         padding?: EdgeInsets;
-        background?: BackgroundPaintLike[];
+        clipBehavior?: Clip;
+        background?: Background;
     }) {
         super(p);
 
         this.children = p.children;
+        this.clipBehavior = p.clipBehavior;
+        this.borderRadius = p.borderRadius;
         this.width = p.width;
         this.height = p.height;
         this.boxShadow = p.boxShadow;

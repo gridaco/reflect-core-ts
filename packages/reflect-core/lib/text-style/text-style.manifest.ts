@@ -1,7 +1,8 @@
-import { ColorManifest } from "../color";
-import { FontStyleManifest } from "../font-style";
-import { FontWeightManifest } from "../font-weight";
-import {
+import type { DimensionLength } from "..";
+import type { ColorManifest } from "../color";
+import type { FontStyleManifest } from "../font-style";
+import type { FontWeightManifest } from "../font-weight";
+import type {
     TextDecorationManifest,
     TextDecorationStyleManifest,
 } from "../text-decoration";
@@ -44,7 +45,7 @@ export interface ITextStyle {
      * css: https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing
      * flutter: https://api.flutter.dev/flutter/painting/TextStyle/letterSpacing.html
      */
-    letterSpacing?: number; // todo - number to letter spacing (em or other css property supported type)
+    letterSpacing?: DimensionLength;
 
     /**
      * css: https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing
@@ -57,7 +58,7 @@ export interface ITextStyle {
      *
      * [css line-hgithg](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height)
      */
-    lineHeight?: number;
+    lineHeight?: DimensionLength;
     // endregion spacing related
 }
 

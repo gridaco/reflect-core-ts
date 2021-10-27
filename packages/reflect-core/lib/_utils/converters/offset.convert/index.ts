@@ -1,4 +1,4 @@
-import { Offset } from "../../../ui";
+import type { Offset } from "../../../";
 
 export function convertOffsetToUniversal(offset?: Offset) {
     if (offset) {

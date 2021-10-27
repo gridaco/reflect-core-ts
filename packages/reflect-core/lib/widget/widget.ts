@@ -1,6 +1,3 @@
-import { BoxShadowManifest } from "../box-shadow";
-import { EdgeInsets } from "../ui/edge-insets";
-
 /**
  * the default widget key interface. infered from design source.
  */
@@ -26,54 +23,54 @@ export class WidgetKey {
 
 type WidgetKeyLike = WidgetKey;
 
-export interface IWHStyleWidget {
-    width?: number;
-    height?: number;
-}
-
-export interface IPositionedWidget {
-    x?: number;
-    y?: number;
-}
-
-export interface IBoxShadowWidget {
-    boxShadow?: BoxShadowManifest;
-}
-
-export interface IEdgeInsetsWidget {
-    padding?: EdgeInsets;
-    margin?: EdgeInsets;
-}
-
 /**
  * Reflect core widget
  */
-export class Widget
-    implements
-        IWHStyleWidget,
-        IPositionedWidget,
-        IBoxShadowWidget,
-        IEdgeInsetsWidget {
+export class Widget {
     readonly _type: string;
     readonly key?: WidgetKeyLike;
-    children: Widget[] | Widget;
 
-    // IWHStyleWidget
-    width: number;
-    height?: number;
+    constructor({ key }: { key: WidgetKeyLike }) {
+        this.key = key;
+    }
+}
 
-    // IPositionWidget
-    x?: number;
-    y?: number;
+export class RenderObjectWidget extends Widget {
+    constructor({ key }: { key: WidgetKeyLike }) {
+        super({ key });
+    }
+}
 
-    /// IBoxShadowWidget
-    boxShadow?: BoxShadowManifest;
+export interface ISingleChildRenderObjectWidget {
+    readonly child?: Widget;
+}
 
-    // IEdgeInsetsWidget
-    padding?: EdgeInsets;
-    margin?: EdgeInsets;
+export class SingleChildRenderObjectWidget
+    extends RenderObjectWidget
+    implements ISingleChildRenderObjectWidget {
+    readonly child?: Widget;
+    constructor({ key, child }: { key?: WidgetKeyLike; child?: Widget }) {
+        super({ key });
+        this.child = child;
+    }
+}
 
-    constructor(p?: { key: WidgetKeyLike }) {
-        this.key = p?.key;
+export interface IMultiChildRenderObjectWidget {
+    readonly children: Array<Widget>;
+}
+
+export class MultiChildRenderObjectWidget
+    extends RenderObjectWidget
+    implements IMultiChildRenderObjectWidget {
+    readonly children: Array<Widget>;
+    constructor({
+        key,
+        children,
+    }: {
+        key?: WidgetKeyLike;
+        children: Array<Widget>;
+    }) {
+        super({ key: key });
+        this.children = children;
     }
 }
