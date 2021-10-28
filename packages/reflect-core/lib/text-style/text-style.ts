@@ -4,7 +4,7 @@ import { Color, Colors } from "../color";
 import { FontStyle } from "../font-style";
 import { FontWeight } from "../font-weight";
 import { TextDecoration, TextDecorationStyle } from "../text-decoration";
-import { TextShadow } from "../text-shadow";
+import { TextShadowManifest } from "../text-shadow";
 import { ITextStyle as ITextStyle } from "./text-style.manifest";
 export class TextStyle implements ITextStyle {
     fontFamily: string;
@@ -19,7 +19,7 @@ export class TextStyle implements ITextStyle {
     letterSpacing: LetterSpacing;
     wordSpacing?: number;
     lineHeight: DimensionLength;
-    textShadow: TextShadow[];
+    textShadow: TextShadowManifest[];
 
     constructor({
         fontFamily,

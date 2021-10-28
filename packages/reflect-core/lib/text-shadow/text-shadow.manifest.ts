@@ -1,17 +1,3 @@
-import { Color } from "../color";
-import { Offset } from "../offset";
-import { BlendMode } from "../cg/filters";
-import { RGBA } from "../color";
-import { Vector } from "../uiutils/types";
+import { BoxShadowManifest } from "@reflect-ui/core";
 
-/**
- * Currently not supporting inner shadow
- */
-export interface TextShadow {
-    color: Color;
-    offset: Offset;
-    blurRadius: number;
-    spreadRadius: number;
-}
-
-export type TextShadowManifest = TextShadow;
+export type TextShadowManifest = BoxShadowManifest;
