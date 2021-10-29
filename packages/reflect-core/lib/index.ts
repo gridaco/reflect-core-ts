@@ -20,6 +20,7 @@ export * from "./font-weight";
 export * from "./font-style";
 export * from "./icon";
 export * from "./image";
+export * from "./letter-spacing";
 export * from "./linear-gradient";
 export * from "./gradient";
 export * from "./opacity";

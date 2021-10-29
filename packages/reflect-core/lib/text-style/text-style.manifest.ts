@@ -1,5 +1,4 @@
-import { LetterSpacing } from "@design-sdk/figma-types";
-import { DimensionLength, TextShadowManifest } from "..";
+import { DimensionLength, TextShadowManifest, LetterSpacing } from "..";
 import { ColorManifest } from "../color";
 import { FontStyleManifest } from "../font-style";
 import { FontWeightManifest } from "../font-weight";
