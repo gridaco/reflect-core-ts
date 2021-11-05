@@ -1,4 +1,4 @@
-import { LetterSpacing } from "@design-sdk/figma-types";
+import { LetterSpacing } from "../letter-spacing";
 import { DimensionLength } from "..";
 import { Color, Colors } from "../color";
 import { FontStyle } from "../font-style";
