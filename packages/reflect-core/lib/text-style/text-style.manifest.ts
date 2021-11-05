@@ -1,5 +1,4 @@
-import { LetterSpacing } from "@design-sdk/figma-types";
-import { DimensionLength, TextShadowManifest } from "..";
+import { DimensionLength, TextShadowManifest, LetterSpacing } from "..";
 import { ColorManifest } from "../color";
 import { FontStyleManifest } from "../font-style";
 import { FontWeightManifest } from "../font-weight";
@@ -62,6 +61,13 @@ export interface ITextStyle {
     lineHeight?: DimensionLength;
     // endregion spacing related
 
+    /**
+     * textShadow supports multiple shadows in css and flutter.
+     *
+     * [css](https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow)
+     *
+     * [flutter](https://api.flutter.dev/flutter/painting/TextStyle/shadows.html)
+     */
     textShadow?: TextShadowManifest[];
 }
 

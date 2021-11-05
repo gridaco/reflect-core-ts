@@ -1,9 +1,10 @@
-import { LetterSpacing } from "@design-sdk/figma-types";
+import { LetterSpacing } from "../letter-spacing";
 import { DimensionLength } from "..";
 import { Color, Colors } from "../color";
 import { FontStyle } from "../font-style";
 import { FontWeight } from "../font-weight";
 import { TextDecoration, TextDecorationStyle } from "../text-decoration";
+import { TextShadow } from "../text-shadow";
 import { ITextStyle as ITextStyle } from "./text-style.manifest";
 export class TextStyle implements ITextStyle {
     fontFamily: string;
@@ -18,6 +19,7 @@ export class TextStyle implements ITextStyle {
     letterSpacing: LetterSpacing;
     wordSpacing?: number;
     lineHeight: DimensionLength;
+    textShadow: TextShadow[];
 
     constructor({
         fontFamily,
@@ -32,6 +34,7 @@ export class TextStyle implements ITextStyle {
         letterSpacing,
         wordSpacing,
         lineHeight,
+        textShadow,
     }: ITextStyle) {
         this.fontFamily = fontFamily;
         this.fontWeight = fontWeight;
@@ -45,5 +48,6 @@ export class TextStyle implements ITextStyle {
         this.letterSpacing = letterSpacing;
         this.wordSpacing = wordSpacing;
         this.lineHeight = lineHeight;
+        this.textShadow = textShadow;
     }
 }
