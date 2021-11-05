@@ -61,6 +61,10 @@ export interface ITextStyle {
     lineHeight?: DimensionLength;
     // endregion spacing related
 
+    /**
+     * css: https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow
+     * flutter: https://api.flutter.dev/flutter/dart-ui/Shadow-class.html
+     */
     textShadow?: TextShadowManifest[];
 }
 
