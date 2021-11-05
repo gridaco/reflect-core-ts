@@ -19,10 +19,7 @@
  * In the future, what is used as DimensionLength will also be converted and integrated into the following format.
  */
 
-enum Unit {
-    pixels = "pixels",
-    percent = "percent",
-}
+type Unit = "PIXELS" | "PERCENT";
 
 export type LetterSpacing = {
     value: number;
