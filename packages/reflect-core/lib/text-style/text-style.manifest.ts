@@ -65,7 +65,8 @@ export interface ITextStyle {
      * textShadow supports multiple shadows in css and flutter.
      *
      * [css](https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow)
-     * [flutter](https://api.flutter.dev/flutter/dart-ui/Shadow-class.html)
+     *
+     * [flutter](https://api.flutter.dev/flutter/painting/TextStyle/shadows.html)
      */
     textShadow?: TextShadowManifest[];
 }

@@ -10,10 +10,9 @@ import { Offset } from "../offset";
  * [w3](https://www.w3.org/TR/css-text-decor-4/#propdef-text-shadow)
  *
  * figma: https://www.figma.com/plugin-docs/api/Effect/#dropshadoweffect
- */
-
-/**
+ *
  * Currently not supporting inner shadow
+ *
  */
 
 export interface TextShadow {
