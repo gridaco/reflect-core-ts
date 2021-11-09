@@ -6,7 +6,7 @@ import type { BorderRadiusManifest, DimensionLength, EdgeInsets } from "../";
 import { DefaultStyleWidget, WidgetKey } from "../widget";
 
 export interface IContainerInitializerProps {
-    boxShadow?: BoxShadowManifest;
+    boxShadow?: BoxShadowManifest[];
     width?: number;
     height?: number;
     margin?: EdgeInsets;
@@ -45,7 +45,7 @@ export class Container extends DefaultStyleWidget {
     visible: boolean = true;
 
     // effects
-    boxShadow?: BoxShadowManifest;
+    boxShadow?: BoxShadowManifest[];
     background?: Background;
 
     constructor({

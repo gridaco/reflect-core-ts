@@ -23,5 +23,5 @@ export interface CGRectManifest {
         strokeWidth: number;
     };
 
-    shadow?: BoxShadowManifest;
+    shadow?: BoxShadowManifest[];
 }

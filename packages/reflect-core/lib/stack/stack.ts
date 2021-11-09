@@ -12,7 +12,7 @@ export class Stack extends DefaultStyleMultiChildRenderObjectWidget {
 
     width: number;
     height: number;
-    boxShadow?: BoxShadowManifest;
+    boxShadow?: BoxShadowManifest[];
     clipBehavior?: Clip;
     children: Widget[];
 
@@ -21,7 +21,7 @@ export class Stack extends DefaultStyleMultiChildRenderObjectWidget {
         children: Widget[];
         width: number;
         height: number;
-        boxShadow?: BoxShadowManifest;
+        boxShadow?: BoxShadowManifest[];
         borderRadius?: BorderRadiusManifest;
         border?: Border;
         margin?: EdgeInsets;
