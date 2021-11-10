@@ -23,7 +23,7 @@ export interface IPositionedWidget {
 }
 
 export interface IBoxShadowWidget {
-    boxShadow?: BoxShadowManifest;
+    boxShadow?: BoxShadowManifest[];
 }
 
 export interface IEdgeInsetsWidget {
@@ -38,7 +38,7 @@ export interface IDefaultStyleWidget
         IEdgeInsetsWidget {}
 
 export interface IDefaultStyleInitializerProps {
-    boxShadow?: BoxShadowManifest;
+    boxShadow?: BoxShadowManifest[];
     width?: number;
     height?: number;
     margin?: EdgeInsets;
@@ -58,7 +58,7 @@ export class DefaultStyleMultiChildRenderObjectWidget
     x?: number;
     y?: number;
     /// IBoxShadowWidget
-    boxShadow?: BoxShadowManifest;
+    boxShadow?: BoxShadowManifest[];
     // IEdgeInsetsWidget
     padding?: EdgeInsets;
     margin?: EdgeInsets;
@@ -118,7 +118,7 @@ export class DefaultStyleWidget
     x?: number;
     y?: number;
     /// IBoxShadowWidget
-    boxShadow?: BoxShadowManifest;
+    boxShadow?: BoxShadowManifest[];
     // IEdgeInsetsWidget
     padding?: EdgeInsets;
     margin?: EdgeInsets;

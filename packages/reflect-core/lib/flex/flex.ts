@@ -70,7 +70,7 @@ export class Flex
         mainAxisAlignment?: MainAxisAlignment;
         mainAxisSize?: MainAxisSize;
         //
-        boxShadow?: BoxShadowManifest;
+        boxShadow?: BoxShadowManifest[];
         margin?: EdgeInsets;
         padding?: EdgeInsets;
         background?: Background;
