@@ -1,4 +1,6 @@
 export * from "./gradient.manifest";
 
 import type { LinearGradient } from "../linear-gradient";
-export type Gradient = LinearGradient;
+import { RadialGradient } from "../radial-gradient";
+
+export type Gradient = LinearGradient | RadialGradient;
