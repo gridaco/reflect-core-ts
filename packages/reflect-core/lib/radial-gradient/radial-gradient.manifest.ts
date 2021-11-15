@@ -3,18 +3,18 @@ import { Alignment } from "../alignment";
 import { GradientType } from "../gradient";
 
 /**
- * reflect's global linear gradient manifest
+ * reflect's global radial gradient manifest
  * [flutter#RadialGradient](https://api.flutter.dev/flutter/painting/RadialGradient-class.html)
  * [css#radial-gradient](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient())
  */
 export interface RadialGradientManifest {
     readonly _type: GradientType.RADIAL;
     /**
-     * The offset at which center 0.0 of the gradient is placed.
+     * The center of the gradient, as an offset into the (-1.0, -1.0) x (1.0, 1.0) square describing the gradient which will be mapped onto the paint box.
      */
     center?: Alignment;
     /**
-     * The radius that determines the circular shape
+     * The radius of the gradient, as a fraction of the shortest side of the paint box.
      */
     radius?: number;
     /**
