@@ -10,13 +10,13 @@ import { GradientType } from "../gradient";
 export interface RadialGradientManifest {
     readonly _type: GradientType.RADIAL;
     /**
-     * The offset at which stop 0.0 of the gradient is placed.
+     * center of gradient
      */
-    begin: Alignment;
+    center?: Alignment;
     /**
-     * The offset at which stop 1.0 of the gradient is placed.
+     * The radius that determines the circular shape
      */
-    end: Alignment;
+    radius?: number;
     /**
      * The colors the gradient should obtain at each of the stops.
      */
@@ -30,19 +30,19 @@ export interface RadialGradientManifest {
 export class RadialGradient implements RadialGradientManifest {
     readonly _type = GradientType.RADIAL;
 
-    readonly begin: Alignment;
-    readonly end: Alignment;
+    readonly center: Alignment;
+    readonly radius: number;
     readonly colors: Color[];
     readonly stops?: number[];
 
     constructor({
-        begin = Alignment.centerLeft,
-        end = Alignment.centerRight,
+        center = Alignment.center,
+        radius,
         colors,
         stops,
     }: {} & Omit<RadialGradientManifest, "_type">) {
-        this.begin = begin;
-        this.end = end;
+        this.center = center;
+        this.radius = radius;
         this.colors = colors;
         this.stops = stops;
     }
