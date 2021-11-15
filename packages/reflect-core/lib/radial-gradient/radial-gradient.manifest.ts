@@ -10,7 +10,7 @@ import { GradientType } from "../gradient";
 export interface RadialGradientManifest {
     readonly _type: GradientType.RADIAL;
     /**
-     * center of gradient
+     * The offset at which center 0.0 of the gradient is placed.
      */
     center?: Alignment;
     /**
