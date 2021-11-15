@@ -31,13 +31,13 @@ export class RadialGradient implements RadialGradientManifest {
     readonly _type = GradientType.RADIAL;
 
     readonly center: Alignment;
-    readonly radius: number;
+    readonly radius?: number;
     readonly colors: Color[];
     readonly stops?: number[];
 
     constructor({
         center = Alignment.center,
-        radius,
+        radius = 0.5,
         colors,
         stops,
     }: {} & Omit<RadialGradientManifest, "_type">) {
