@@ -1,12 +1,13 @@
 import type { Color } from "../color";
-import type { Gradient } from "../gradient";
+import type { GradientGroup } from "../gradient";
 
 export type BackgroundPaintLike =
     | (Color & {
           type: "solid-color";
       })
-    | (Gradient & {
+    | {
           type: "gradient";
-      })
+          gradient: GradientGroup;
+      }
     | { type: "graphics" };
 export type Background = BackgroundPaintLike | BackgroundPaintLike[];
