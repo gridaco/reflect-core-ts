@@ -14,6 +14,16 @@ export interface ITextPropertyFields {
     readonly maxLines?;
 }
 
+export type WebTextElement =
+    | "h1"
+    | "h2"
+    | "h3"
+    | "h4"
+    | "h5"
+    | "h6"
+    | "p"
+    | "span";
+
 /**
  * [flutter docs](https://api.flutter.dev/flutter/widgets/Text-class.html)
  */
@@ -38,6 +48,15 @@ export interface TextManifest extends ITextPropertyFields {
      * this is not supported with css standard [related link here](https://stackoverflow.com/questions/55487695/react-native-text-component-using-number-of-lines)
      */
     maxLines?: Dynamic<number>;
+
+    /**
+     * @experimental
+     * element specification is extended attribute to specify prefered element to be rendered with on the html based frameworks.
+     *
+     * this is not referenced by Flutter & Flutter Web, Android, iOS, etc.
+     * Yet, frameworks like flutter has a styling system similar to this, it will be studied in the future for maximun compatibility.
+     */
+    element_preference_experimental?: WebTextElement;
 }
 
 /**
