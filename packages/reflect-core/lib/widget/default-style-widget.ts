@@ -13,8 +13,12 @@ import {
 } from "./widget";
 
 export interface IWHStyleWidget {
-    width?: number;
-    height?: number;
+    width?: DimensionLength;
+    height?: DimensionLength;
+    minWidth?: DimensionLength;
+    minHeight?: DimensionLength;
+    maxWidth?: DimensionLength;
+    maxHeight?: DimensionLength;
 }
 
 export interface IPositionedWidget {
@@ -39,8 +43,8 @@ export interface IDefaultStyleWidget
 
 export interface IDefaultStyleInitializerProps {
     boxShadow?: BoxShadowManifest[];
-    width?: number;
-    height?: number;
+    width?: DimensionLength;
+    height?: DimensionLength;
     margin?: EdgeInsets;
     padding?: EdgeInsets;
     background?: Background;
@@ -50,10 +54,11 @@ export interface IDefaultStyleInitializerProps {
 
 export class DefaultStyleMultiChildRenderObjectWidget
     extends MultiChildRenderObjectWidget
-    implements IDefaultStyleWidget {
+    implements IDefaultStyleWidget
+{
     // IWHStyleWidget
-    width?: number;
-    height?: number;
+    width?: DimensionLength;
+    height?: DimensionLength;
     // IPositionWidget
     x?: number;
     y?: number;
@@ -110,7 +115,8 @@ export class DefaultStyleMultiChildRenderObjectWidget
  */
 export class DefaultStyleWidget
     extends RenderObjectWidget
-    implements IDefaultStyleWidget {
+    implements IDefaultStyleWidget
+{
     // IWHStyleWidget
     width?: number;
     height?: number;
