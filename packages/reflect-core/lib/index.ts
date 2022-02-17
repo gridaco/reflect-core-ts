@@ -66,6 +66,9 @@ export * from "./wrap";
 // length
 export * from "./length";
 
+// background
+export * from "./background";
+
 // super core
 export * as cg from "./cg";
 export * as cgr from "./cgr";
