@@ -5,10 +5,10 @@ import { BorderSide } from "../border-side";
  * Border interface
  */
 export interface Border {
-    top: BorderSide;
-    left: BorderSide;
-    right: BorderSide;
-    bottom: BorderSide;
+    top?: BorderSide;
+    left?: BorderSide;
+    right?: BorderSide;
+    bottom?: BorderSide;
 }
 
 /**
