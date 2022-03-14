@@ -6,6 +6,7 @@ export * from "./button";
 export * from "./border";
 export * from "./border-radius";
 export * from "./border-side";
+export * from "./border-style";
 export * from "./box-shadow";
 export * from "./box-shape";
 export * from "./blurred";

@@ -1,5 +1,6 @@
-import { Color } from "../color";
-import { BorderSide } from "../border-side";
+import type { Color } from "../color";
+import type { BorderSide } from "../border-side";
+import type { BorderStyle } from "../border-style";
 
 /**
  * Border interface
@@ -22,12 +23,16 @@ export class Border {
         this.bottom = bottom;
     }
 
-    static all({ color, width }: { color: Color; width: number }) {
+    static all({
+        color,
+        width,
+        style,
+    }: { color: Color; width: number } & { style?: BorderStyle }) {
         return new Border({
-            top: { color, width },
-            left: { color, width },
-            right: { color, width },
-            bottom: { color, width },
+            top: { color, width, style },
+            left: { color, width, style },
+            right: { color, width, style },
+            bottom: { color, width, style },
         });
     }
 }
