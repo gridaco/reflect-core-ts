@@ -6,6 +6,7 @@ import { FontWeight } from "../font-weight";
 import { TextDecoration, TextDecorationStyle } from "../text-decoration";
 import { TextShadow } from "../text-shadow";
 import { ITextStyle as ITextStyle } from "./text-style.manifest";
+import { TextTransform } from "../text-transform";
 export class TextStyle implements ITextStyle {
     fontFamily: string;
     fontWeight: FontWeight;
@@ -20,6 +21,7 @@ export class TextStyle implements ITextStyle {
     wordSpacing?: number;
     lineHeight: DimensionLength;
     textShadow: TextShadow[];
+    textTransform: TextTransform;
 
     constructor({
         fontFamily,
@@ -35,6 +37,7 @@ export class TextStyle implements ITextStyle {
         wordSpacing,
         lineHeight,
         textShadow,
+        textTransform = TextTransform.none,
     }: ITextStyle) {
         this.fontFamily = fontFamily;
         this.fontWeight = fontWeight;
@@ -49,5 +52,6 @@ export class TextStyle implements ITextStyle {
         this.wordSpacing = wordSpacing;
         this.lineHeight = lineHeight;
         this.textShadow = textShadow;
+        this.textTransform = textTransform;
     }
 }

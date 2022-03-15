@@ -1,4 +1,9 @@
-import { DimensionLength, TextShadowManifest, LetterSpacing } from "..";
+import type {
+    DimensionLength,
+    TextShadowManifest,
+    LetterSpacing,
+    TextTransform,
+} from "..";
 import { ColorManifest } from "../color";
 import { FontStyleManifest } from "../font-style";
 import { FontWeightManifest } from "../font-weight";
@@ -69,6 +74,13 @@ export interface ITextStyle {
      * [flutter](https://api.flutter.dev/flutter/painting/TextStyle/shadows.html)
      */
     textShadow?: TextShadowManifest[];
+
+    /**
+     * transformatoion of the text in style level.
+     *
+     * [css](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform)
+     */
+    textTransform?: TextTransform;
 }
 
 export interface TextStyleManifest extends ITextStyle {
