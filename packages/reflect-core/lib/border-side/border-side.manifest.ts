@@ -20,6 +20,14 @@ export interface BorderSide {
  */
 export class BorderSide {
     constructor(p: BorderSide) {
-        //
+        this.color = p.color;
+        this.style = p.style;
+        this.width = p.width;
     }
+
+    public static none: BorderSide = new BorderSide({
+        width: 0.0,
+        style: BorderStyle.none,
+        color: null,
+    });
 }
