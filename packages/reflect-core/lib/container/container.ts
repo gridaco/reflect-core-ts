@@ -3,7 +3,11 @@ import { Border } from "../border";
 import { BoxShadowManifest } from "../box-shadow";
 import { BoxShape } from "../box-shape";
 import type { BorderRadiusManifest, DimensionLength, EdgeInsets } from "../";
-import { DefaultStyleWidget, WidgetKey } from "../widget";
+import {
+    DefaultStyleSingleChildRenderObjectWidget,
+    Widget,
+    WidgetKey,
+} from "../widget";
 
 export interface IContainerInitializerProps {
     boxShadow?: BoxShadowManifest[];
@@ -14,12 +18,13 @@ export interface IContainerInitializerProps {
     background?: Background;
     border?: Border;
     borderRadius?: BorderRadiusManifest;
+    child?: Widget;
 }
 
 /**
  * Container, a node equivalant.
  */
-export class Container extends DefaultStyleWidget {
+export class Container extends DefaultStyleSingleChildRenderObjectWidget {
     _type = "Container";
 
     /**
@@ -58,11 +63,13 @@ export class Container extends DefaultStyleWidget {
         border,
         width,
         height,
+        child,
     }: {
         key: WidgetKey;
     } & IContainerInitializerProps) {
         super({
             key: key,
+            child: child,
         });
 
         this.boxShadow = boxShadow;

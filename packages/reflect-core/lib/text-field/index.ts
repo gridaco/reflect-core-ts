@@ -1,9 +1,7 @@
 import { Color, Colors } from "../color";
 import { EdgeInsets } from "../edge-insets";
-import { EdgeInsetsGeometry } from "../edge-insets-geomatry";
 import { InputBorder } from "../input-border";
-import type { MouseCursor } from "../mouse-cursor";
-import { TextAlign, TextAlignVertical } from "../text-align";
+import { TextAlign } from "../text-align";
 import { TextInputType } from "../text-input-type";
 import type { TextStyle } from "../text-style";
 import { WidgetKey } from "../widget";

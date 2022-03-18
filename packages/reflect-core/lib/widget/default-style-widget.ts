@@ -9,6 +9,7 @@ import { DimensionLength } from "../length";
 import {
     MultiChildRenderObjectWidget,
     RenderObjectWidget,
+    SingleChildRenderObjectWidget,
     WidgetKey,
 } from "./widget";
 
@@ -97,6 +98,64 @@ export class DefaultStyleMultiChildRenderObjectWidget
         super({
             key: key,
             children: children,
+        });
+
+        this.boxShadow = boxShadow;
+        this.margin = margin;
+        this.padding = padding;
+        this.background = background;
+        this.borderRadius = borderRadius;
+        this.border = border;
+        this.width = width;
+        this.height = height;
+    }
+}
+
+export class DefaultStyleSingleChildRenderObjectWidget
+    extends SingleChildRenderObjectWidget
+    implements IDefaultStyleWidget
+{
+    // IWHStyleWidget
+    width?: DimensionLength;
+    height?: DimensionLength;
+    // IPositionWidget
+    x?: number;
+    y?: number;
+    /// IBoxShadowWidget
+    boxShadow?: BoxShadowManifest[];
+    // IEdgeInsetsWidget
+    padding?: EdgeInsets;
+    margin?: EdgeInsets;
+
+    background?: Background;
+    minWidth?: DimensionLength;
+    minHeight?: DimensionLength;
+    maxWidth?: DimensionLength;
+    maxHeight?: DimensionLength;
+
+    shape?: BoxShape;
+    border?: Border;
+    borderRadius?: BorderRadiusManifest;
+    visible: boolean = true;
+
+    constructor({
+        key = undefined,
+        child,
+        margin,
+        padding,
+        background,
+        boxShadow,
+        borderRadius,
+        border,
+        width,
+        height,
+    }: {
+        key: WidgetKey;
+        child?: Widget;
+    } & IDefaultStyleInitializerProps) {
+        super({
+            key: key,
+            child: child,
         });
 
         this.boxShadow = boxShadow;
