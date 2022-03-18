@@ -17,14 +17,14 @@ import { Widget, WidgetKey } from "../widget";
  * - [mui.com#text-fields](https://mui.com/components/text-fields/)
  * - [android#EdtiText](https://developer.android.com/reference/android/widget/EditText)
  */
-export interface TextField {
-    autocorrect: boolean;
-    autofocus: boolean;
+export interface ITextFieldManifest {
+    autocorrect?: boolean;
+    autofocus?: boolean;
     autofillHints?: string[];
-    cursorColor: Color;
-    cursorHeight: number;
+    cursorColor?: Color;
+    cursorHeight?: number;
     cursorRadius?: number;
-    cursorWidth: number;
+    cursorWidth?: number;
 
     /**
      * - html: value="{value}"
@@ -38,7 +38,7 @@ export interface TextField {
      * @default false
      */
     disabled?: boolean;
-    enableSuggestions: boolean;
+    enableSuggestions?: boolean;
 
     /**
      * The appearance of the keyboard. This setting is only honored on iOS devices.
@@ -64,27 +64,27 @@ export interface TextField {
     /**
      *
      */
-    mouseCursor: MouseCursor;
+    mouseCursor?: MouseCursor;
 
     /**
      *
      */
-    obscureText: boolean;
+    obscureText?: boolean;
 
     /**
      *
      */
-    obscuringCharacter: string;
+    obscuringCharacter?: string;
 
     // callbacks
 
     //
 
-    readOnly: boolean;
+    readOnly?: boolean;
 
-    restorationId: string;
+    restorationId?: string;
 
-    scrollPadding: EdgeInsets;
+    scrollPadding?: EdgeInsets;
 
     showCursor?: boolean;
 
@@ -94,14 +94,43 @@ export interface TextField {
 
     style: TextStyle;
 
-    textAlign: TextAlign;
+    textAlign?: TextAlign;
 
-    textAlignVertical: TextAlignVertical;
+    textAlignVertical?: TextAlignVertical;
 }
 
-export class TextField extends Widget {
+export class TextField extends Widget implements ITextFieldManifest {
+    readonly _type = "text-field";
+
+    autocorrect: boolean;
+    autofocus: boolean;
+    autofillHints?: string[];
+    cursorColor?: Color;
+    cursorHeight?: number;
+    cursorRadius?: number;
+    cursorWidth?: number;
+    initialValue?: string;
+    decoration: TextFieldDecoration;
+    disabled: boolean;
+    enableSuggestions?: boolean;
+    keyboardAppearance?: "light" | "dark";
+    keyboardType: TextInputType;
+    maxLines: number;
+    minLines?: number;
+    mouseCursor?: MouseCursor;
+    obscureText: boolean;
+    obscuringCharacter: string;
+    readOnly: boolean;
+    restorationId?: string;
+    scrollPadding: EdgeInsets;
+    showCursor?: boolean;
+    style: TextStyle;
+    textAlign: TextAlign;
+    textAlignVertical?: TextAlignVertical;
+
     constructor({
         key,
+
         initialValue,
         autocorrect = true,
         autofocus = false,
@@ -121,23 +150,26 @@ export class TextField extends Widget {
         restorationId,
         enableSuggestions = true,
         maxLines = 1,
-        minLines,
+        minLines = 1,
         style,
-        readOnly,
+        readOnly = false,
         obscureText = false,
         obscuringCharacter = "•",
         decoration, // = new InputDecoration(),
-    }: TextField & {
+    }: ITextFieldManifest & {
         key: WidgetKey;
     }) {
         super({ key });
 
-        assert(!!autofocus);
-        assert(!!obscuringCharacter && obscuringCharacter.length == 1);
-        assert(!!obscureText);
-        assert(!!autocorrect);
-        assert(!!maxLines || maxLines > 0);
-        assert(!!minLines || minLines > 0);
+        assert(autofocus != null, "autofocus must not be null");
+        assert(
+            !!obscuringCharacter && obscuringCharacter.length == 1,
+            "obscuringCharacter must be a single character"
+        );
+        assert(obscureText != null, "obscureText must not be null or empty");
+        assert(!!autocorrect, "autocorrect must not be null or empty");
+        assert(!!maxLines || maxLines > 0, "maxLines must be greater than 0");
+        assert(!!minLines || minLines > 0, "minLines must be greater than 0");
         assert(
             !!maxLines || !!minLines || maxLines >= minLines,
             "minLines can't be greater than maxLines"

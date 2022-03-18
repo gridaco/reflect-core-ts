@@ -36,6 +36,7 @@ export * from "./text-decoration";
 export * from "./text-overflow";
 export * from "./text-shadow";
 export * from "./text-transform";
+export * from "./text-field";
 export * from "./rect";
 export * from "./radius";
 export * from "./radial-gradient";
