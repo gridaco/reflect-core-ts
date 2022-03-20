@@ -45,13 +45,19 @@ export enum EdgeInsetsShorthandMode {
 }
 
 export function edgeInsetsShorthandMode(
-    m: EdgeInsets
+    m: EdgeInsets,
+    options?: {
+        explicit?: boolean;
+    }
 ): EdgeInsetsShorthandMode {
     if (!m) {
         // no margin
         return EdgeInsetsShorthandMode.empty;
     }
     if (m.top === 0 && m.right === 0 && m.bottom === 0 && m.left === 0) {
+        if (options?.explicit) {
+            return EdgeInsetsShorthandMode.all;
+        }
         return EdgeInsetsShorthandMode.empty;
     }
     if (m.top === m.left && m.left === m.bottom && m.bottom === m.right) {
