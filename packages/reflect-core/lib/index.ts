@@ -3,6 +3,7 @@ export * from "./widget";
 export * from "./axis";
 export * from "./alignment";
 export * from "./button";
+export * from "./button.style";
 export * from "./border";
 export * from "./border-radius";
 export * from "./border-side";
