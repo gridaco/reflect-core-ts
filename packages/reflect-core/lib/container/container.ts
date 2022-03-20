@@ -9,7 +9,7 @@ import {
     WidgetKey,
 } from "../widget";
 
-export interface IContainerInitializerProps {
+export interface IContainerInitializerProps<C extends Widget = Widget> {
     boxShadow?: BoxShadowManifest[];
     width?: number;
     height?: number;
@@ -18,13 +18,15 @@ export interface IContainerInitializerProps {
     background?: Background;
     border?: Border;
     borderRadius?: BorderRadiusManifest;
-    child?: Widget;
+    child?: C;
 }
 
 /**
  * Container, a node equivalant.
  */
-export class Container extends DefaultStyleSingleChildRenderObjectWidget {
+export class Container<
+    C extends Widget = Widget
+> extends DefaultStyleSingleChildRenderObjectWidget<C> {
     _type = "Container";
 
     /**
@@ -66,7 +68,7 @@ export class Container extends DefaultStyleSingleChildRenderObjectWidget {
         child,
     }: {
         key: WidgetKey;
-    } & IContainerInitializerProps) {
+    } & IContainerInitializerProps<C>) {
         super({
             key: key,
             child: child,

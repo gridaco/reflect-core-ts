@@ -111,8 +111,8 @@ export class DefaultStyleMultiChildRenderObjectWidget
     }
 }
 
-export class DefaultStyleSingleChildRenderObjectWidget
-    extends SingleChildRenderObjectWidget
+export class DefaultStyleSingleChildRenderObjectWidget<C extends Widget>
+    extends SingleChildRenderObjectWidget<C>
     implements IDefaultStyleWidget
 {
     // IWHStyleWidget
@@ -151,7 +151,7 @@ export class DefaultStyleSingleChildRenderObjectWidget
         height,
     }: {
         key: WidgetKey;
-        child?: Widget;
+        child?: C;
     } & IDefaultStyleInitializerProps) {
         super({
             key: key,
