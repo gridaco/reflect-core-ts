@@ -2,6 +2,7 @@ import type { Color } from "../color";
 import { MouseCursor, SystemMouseCursors } from "../mouse-cursor";
 import { Widget, WidgetKey } from "../widget";
 import assert from "assert";
+import type { RoundSliderThumbShape } from "../slider.thumb";
 
 export interface ISliderManifest {
     activeColor?: Color;
@@ -12,6 +13,7 @@ export interface ISliderManifest {
     min: number;
     mouseCursor?: MouseCursor;
     thumbColor?: Color;
+    thumbShape?: RoundSliderThumbShape;
     initialValue: number;
 }
 
@@ -24,6 +26,7 @@ interface ISliderProps {
     min?: number;
     mouseCursor?: MouseCursor;
     thumbColor?: Color;
+    thumbShape?: RoundSliderThumbShape;
     initialValue?: number;
 }
 
@@ -36,6 +39,7 @@ export class Slider extends Widget implements ISliderManifest {
     min: number;
     mouseCursor?: SystemMouseCursors;
     thumbColor?: Color;
+    thumbShape?: RoundSliderThumbShape;
     initialValue: number;
 
     constructor({
@@ -48,6 +52,7 @@ export class Slider extends Widget implements ISliderManifest {
         min = 0,
         mouseCursor,
         thumbColor,
+        thumbShape,
         initialValue,
     }: { key?: WidgetKey } & ISliderProps) {
         super({ key });
@@ -67,6 +72,7 @@ export class Slider extends Widget implements ISliderManifest {
         this.min = min;
         this.mouseCursor = mouseCursor;
         this.thumbColor = thumbColor;
+        this.thumbShape = thumbShape;
         this.initialValue = initialValue;
     }
 }
