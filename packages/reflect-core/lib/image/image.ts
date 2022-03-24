@@ -37,8 +37,6 @@ export class ImageWidget extends DefaultStyleWidget implements ImageManifest {
         assert(alignment != null);
         assert(repeat != null);
 
-        super({ key: key });
-
         this.src = src;
         this.width = width;
         this.height = height;
