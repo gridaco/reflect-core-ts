@@ -32,6 +32,7 @@ export * from "./opacity";
 export * from "./offset";
 export * from "./overflow-box";
 export * from "./positioned";
+export * from "./progress";
 export * from "./text";
 export * from "./text-style";
 export * from "./text-shadow";
