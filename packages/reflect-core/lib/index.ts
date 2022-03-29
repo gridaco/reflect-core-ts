@@ -13,6 +13,7 @@ export * from "./box-shape";
 export * from "./box-fit";
 export * from "./blurred";
 export * from "./container";
+export * from "./checkbox";
 export * from "./circle-border";
 export * from "./clip";
 export * from "./clip-rrect";
