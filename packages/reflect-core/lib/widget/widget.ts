@@ -42,7 +42,7 @@ type WidgetKeyLike = WidgetKey;
  */
 export class Widget {
     readonly _type: string;
-    readonly key?: WidgetKeyLike;
+    readonly key: WidgetKeyLike;
 
     constructor({ key }: { key: WidgetKeyLike }) {
         this.key = key;
