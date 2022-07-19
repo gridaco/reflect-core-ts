@@ -3,21 +3,26 @@
  */
 export interface WidgetKey {
     id: string;
+    name: string;
     originName: string;
 }
 
 export class WidgetKey {
     id: string;
+    name: string;
     originName: string;
     constructor({
         id = `${Math.random()}`.replace(".", ""),
         originName = "unknown",
+        name,
     }: {
         id: string;
         originName: string;
+        name?: string;
     }) {
         this.id = id;
         this.originName = originName;
+        this.name = name ?? originName;
     }
 
     public static copyWith(
@@ -31,6 +36,7 @@ export class WidgetKey {
         return new WidgetKey({
             id: id ?? k.id,
             originName: k.originName,
+            name: k.name,
         });
     }
 }
