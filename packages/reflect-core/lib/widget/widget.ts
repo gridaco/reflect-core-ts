@@ -3,21 +3,41 @@
  */
 export interface WidgetKey {
     id: string;
+    name: string;
     originName: string;
 }
 
 export class WidgetKey {
     id: string;
+    name: string;
     originName: string;
     constructor({
         id = `${Math.random()}`.replace(".", ""),
         originName = "unknown",
+        name,
     }: {
         id: string;
         originName: string;
+        name?: string;
     }) {
         this.id = id;
         this.originName = originName;
+        this.name = name ?? originName;
+    }
+
+    public static copyWith(
+        k: WidgetKey,
+        {
+            id,
+        }: {
+            id?: string;
+        }
+    ): WidgetKey {
+        return new WidgetKey({
+            id: id ?? k.id,
+            originName: k.originName,
+            name: k.name,
+        });
     }
 }
 
@@ -28,7 +48,7 @@ type WidgetKeyLike = WidgetKey;
  */
 export class Widget {
     readonly _type: string;
-    readonly key?: WidgetKeyLike;
+    readonly key: WidgetKeyLike;
 
     constructor({ key }: { key: WidgetKeyLike }) {
         this.key = key;
@@ -45,11 +65,12 @@ export interface ISingleChildRenderObjectWidget {
     readonly child?: Widget;
 }
 
-export class SingleChildRenderObjectWidget
+export class SingleChildRenderObjectWidget<C extends Widget = Widget>
     extends RenderObjectWidget
-    implements ISingleChildRenderObjectWidget {
-    readonly child?: Widget;
-    constructor({ key, child }: { key?: WidgetKeyLike; child?: Widget }) {
+    implements ISingleChildRenderObjectWidget
+{
+    readonly child?: C;
+    constructor({ key, child }: { key?: WidgetKeyLike; child?: C }) {
         super({ key });
         this.child = child;
     }
@@ -61,7 +82,8 @@ export interface IMultiChildRenderObjectWidget {
 
 export class MultiChildRenderObjectWidget
     extends RenderObjectWidget
-    implements IMultiChildRenderObjectWidget {
+    implements IMultiChildRenderObjectWidget
+{
     readonly children: Array<Widget>;
     constructor({
         key,

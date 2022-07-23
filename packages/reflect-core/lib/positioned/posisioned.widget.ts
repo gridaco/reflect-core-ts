@@ -6,8 +6,8 @@ interface PositionedManifest {
     readonly top?: DimensionLength;
     readonly right?: DimensionLength;
     readonly bottom?: DimensionLength;
-    readonly width?: number;
-    readonly height?: number;
+    readonly width?: DimensionLength;
+    readonly height?: DimensionLength;
     readonly child: Widget;
 }
 
@@ -18,8 +18,8 @@ export class Positioned extends Widget implements PositionedManifest {
     readonly top?: DimensionLength;
     readonly right?: DimensionLength;
     readonly bottom?: DimensionLength;
-    readonly width?: number;
-    readonly height?: number;
+    readonly width?: DimensionLength;
+    readonly height?: DimensionLength;
     readonly child: Widget;
 
     constructor({ key, ...manifest }: { key: WidgetKey } & PositionedManifest) {

@@ -3,7 +3,11 @@ import { TextOverflow } from "../text-overflow";
 import { ITextStyle } from "../text-style";
 import { Widget, WidgetKey } from "../widget";
 import { Dynamic, Rendered } from "../_utility-types";
-import { RenderedTextManifest, TextManifest } from "./text.manifest";
+import {
+    RenderedTextManifest,
+    TextManifest,
+    WebTextElement,
+} from "./text.manifest";
 
 export class Text extends Widget implements TextManifest {
     // #region text manifest
@@ -18,6 +22,9 @@ export class Text extends Widget implements TextManifest {
 
     width?: number;
     height?: number;
+
+    // experimental
+    element_preference_experimental?: WebTextElement;
 
     constructor({
         key,

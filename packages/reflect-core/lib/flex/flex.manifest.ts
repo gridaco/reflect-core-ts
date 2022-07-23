@@ -4,6 +4,7 @@ import { CrossAxisAlignment } from "../cross-axis-alignment";
 import { MainAxisAlignment } from "../main-axis-alignment";
 import { MainAxisSize } from "../main-axis-size";
 import { VerticalDirection } from "../vertical-direction";
+import { DimensionLength } from "../length";
 
 export interface IFlexManifest<T = Widget> {
     children: T[];
@@ -14,8 +15,8 @@ export interface IFlexManifest<T = Widget> {
     mainAxisSize?: MainAxisSize;
     flex?: number;
     itemSpacing?: number;
-    width?: number;
-    height?: number;
+    width?: DimensionLength;
+    height?: DimensionLength;
 }
 
 export type FlexManifest = IFlexManifest;

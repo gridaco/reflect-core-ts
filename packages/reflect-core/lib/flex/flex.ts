@@ -11,7 +11,12 @@ import { MainAxisSize } from "../main-axis-size";
 import { VerticalDirection } from "../vertical-direction";
 import { BoxShadowManifest } from "../box-shadow";
 import { Background } from "../background";
-import type { Border, BorderRadiusManifest, EdgeInsets } from "..";
+import type {
+    Border,
+    BorderRadiusManifest,
+    DimensionLength,
+    EdgeInsets,
+} from "..";
 
 /**
  * references:
@@ -20,7 +25,8 @@ import type { Border, BorderRadiusManifest, EdgeInsets } from "..";
  */
 export class Flex
     extends DefaultStyleMultiChildRenderObjectWidget
-    implements IFlexManifest {
+    implements IFlexManifest
+{
     readonly _type: "Flex" | "Column" | "Row" | "Wrap" = "Flex";
     children: Widget[];
     crossAxisAlignment: CrossAxisAlignment;
@@ -59,8 +65,8 @@ export class Flex
         border,
     }: {
         key?: WidgetKey;
-        width?: number; //| "auto";
-        height?: number; // | "auto";
+        width?: DimensionLength; //| "auto";
+        height?: DimensionLength; // | "auto";
         children?: Widget[];
         crossAxisAlignment?: CrossAxisAlignment;
         direction?: Axis;
@@ -70,7 +76,7 @@ export class Flex
         mainAxisAlignment?: MainAxisAlignment;
         mainAxisSize?: MainAxisSize;
         //
-        boxShadow?: BoxShadowManifest;
+        boxShadow?: BoxShadowManifest[];
         margin?: EdgeInsets;
         padding?: EdgeInsets;
         background?: Background;

@@ -17,7 +17,7 @@ export class Row extends Flex {
         p: Omit<IFlexManifest, "direction"> & {
             key: WidgetKey;
             //
-            boxShadow?: BoxShadowManifest;
+            boxShadow?: BoxShadowManifest[];
             margin?: EdgeInsets;
             padding?: EdgeInsets;
             background?: Background;

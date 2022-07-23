@@ -3,10 +3,14 @@ import { Border } from "../border";
 import { BoxShadowManifest } from "../box-shadow";
 import { BoxShape } from "../box-shape";
 import type { BorderRadiusManifest, DimensionLength, EdgeInsets } from "../";
-import { DefaultStyleWidget, WidgetKey } from "../widget";
+import {
+    DefaultStyleSingleChildRenderObjectWidget,
+    Widget,
+    WidgetKey,
+} from "../widget";
 
-export interface IContainerInitializerProps {
-    boxShadow?: BoxShadowManifest;
+export interface IContainerInitializerProps<C extends Widget = Widget> {
+    boxShadow?: BoxShadowManifest[];
     width?: number;
     height?: number;
     margin?: EdgeInsets;
@@ -14,12 +18,15 @@ export interface IContainerInitializerProps {
     background?: Background;
     border?: Border;
     borderRadius?: BorderRadiusManifest;
+    child?: C;
 }
 
 /**
  * Container, a node equivalant.
  */
-export class Container extends DefaultStyleWidget {
+export class Container<
+    C extends Widget = Widget
+> extends DefaultStyleSingleChildRenderObjectWidget<C> {
     _type = "Container";
 
     /**
@@ -45,7 +52,7 @@ export class Container extends DefaultStyleWidget {
     visible: boolean = true;
 
     // effects
-    boxShadow?: BoxShadowManifest;
+    boxShadow?: BoxShadowManifest[];
     background?: Background;
 
     constructor({
@@ -58,11 +65,13 @@ export class Container extends DefaultStyleWidget {
         border,
         width,
         height,
+        child,
     }: {
         key: WidgetKey;
-    } & IContainerInitializerProps) {
+    } & IContainerInitializerProps<C>) {
         super({
             key: key,
+            child: child,
         });
 
         this.boxShadow = boxShadow;

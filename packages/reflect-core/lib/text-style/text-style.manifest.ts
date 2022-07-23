@@ -1,3 +1,4 @@
+import type { TextShadowManifest, LetterSpacing, TextTransform } from "..";
 import type { DimensionLength } from "..";
 import type { ColorManifest } from "../color";
 import type { FontStyleManifest } from "../font-style";
@@ -60,6 +61,22 @@ export interface ITextStyle {
      */
     lineHeight?: DimensionLength;
     // endregion spacing related
+
+    /**
+     * textShadow supports multiple shadows in css and flutter.
+     *
+     * [css](https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow)
+     *
+     * [flutter](https://api.flutter.dev/flutter/painting/TextStyle/shadows.html)
+     */
+    textShadow?: TextShadowManifest[];
+
+    /**
+     * transformatoion of the text in style level.
+     *
+     * [css](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform)
+     */
+    textTransform?: TextTransform;
 }
 
 export interface TextStyleManifest extends ITextStyle {

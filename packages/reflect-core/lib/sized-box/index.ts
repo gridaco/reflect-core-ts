@@ -1,9 +1,9 @@
 import { SingleChildRenderObjectWidget, Widget, WidgetKey } from "../widget";
 
-export interface SizedBoxManifest {
+export interface SizedBoxManifest<C extends Widget> {
     readonly width: number;
     readonly height: number;
-    readonly child: Widget;
+    readonly child: C;
 }
 
 /**
@@ -15,19 +15,20 @@ export interface SizedBoxManifest {
  * [CSS/width](https://developer.mozilla.org/en-US/docs/Web/CSS/width)
  * [CSS/height](https://developer.mozilla.org/en-US/docs/Web/CSS/height)
  */
-export class SizedBox
+export class SizedBox<C extends Widget = Widget>
     extends SingleChildRenderObjectWidget
-    implements SizedBoxManifest {
+    implements SizedBoxManifest<C>
+{
     readonly width: number;
     readonly height: number;
-    readonly child: Widget;
+    readonly child: C;
 
     constructor({
         key,
         width,
         height,
         child,
-    }: { key: WidgetKey } & SizedBoxManifest) {
+    }: { key: WidgetKey } & SizedBoxManifest<C>) {
         super({ key, child });
         this.width = width;
         this.height = height;

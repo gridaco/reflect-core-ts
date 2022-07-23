@@ -1,35 +1,48 @@
-import { ButtonManifest } from ".";
-import { Widget, WidgetKey } from "..";
-import { ButtonBaseManifest } from "../button.base";
-import { ButtonIconManifest } from "../button.icon";
-import { ButtonTextManifest } from "../button.text";
-import { ButtonVariant } from "./button.manifest";
+import { Widget } from "../widget";
+import type { WidgetKey } from "..";
+import type { ButtonStyle } from "../button.style";
 
-export class ButtonWidget extends Widget implements ButtonManifest {
+export interface IButtonStyleButton {
+    autofocus?: boolean;
+    style: ButtonStyle;
+    child: Widget;
+    /**
+     * Whether the button is disabled or enabled.
+     * @default false
+     */
+    disabled?: boolean;
+}
+
+export interface IButtonStyleButtonProps {
+    autofocus?: boolean;
+    style?: ButtonStyle;
+    child: Widget;
+    disabled?: boolean;
+}
+
+export class ButtonStyleButton extends Widget implements IButtonStyleButton {
+    readonly _type: "button-style-button" = "button-style-button";
+
+    autofocus?: boolean;
+    style: ButtonStyle;
+    child: Widget;
+    disabled?: boolean;
+
     constructor({
         key,
         //
-        base,
-        text,
-        icon,
-        variant,
-        minWidth,
-        name,
-    }: { key: WidgetKey } & ButtonManifest) {
+        autofocus = false,
+        style,
+        child,
+        disabled = false,
+    }: {
+        key: WidgetKey;
+    } & IButtonStyleButtonProps) {
         super({ key });
 
-        this.base = base;
-        this.text = text;
-        this.icon = icon;
-        this.variant = variant;
-        this.minWidth = minWidth;
-        this.name = name;
+        this.autofocus = autofocus;
+        this.style = style;
+        this.child = child;
+        this.disabled = disabled;
     }
-
-    base: ButtonBaseManifest;
-    text?: ButtonTextManifest;
-    icon?: ButtonIconManifest;
-    variant: ButtonVariant;
-    minWidth?: number;
-    name?: string;
 }
