@@ -1,13 +1,9 @@
+import type { TextShadowManifest, LetterSpacing, TextTransform } from "..";
+import type { DimensionLength } from "..";
+import type { ColorManifest } from "../color";
+import type { FontStyleManifest } from "../font-style";
+import type { FontWeightManifest } from "../font-weight";
 import type {
-    DimensionLength,
-    TextShadowManifest,
-    LetterSpacing,
-    TextTransform,
-} from "..";
-import { ColorManifest } from "../color";
-import { FontStyleManifest } from "../font-style";
-import { FontWeightManifest } from "../font-weight";
-import {
     TextDecorationManifest,
     TextDecorationStyleManifest,
 } from "../text-decoration";
@@ -50,7 +46,7 @@ export interface ITextStyle {
      * css: https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing
      * flutter: https://api.flutter.dev/flutter/painting/TextStyle/letterSpacing.html
      */
-    letterSpacing?: LetterSpacing;
+    letterSpacing?: DimensionLength;
 
     /**
      * css: https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing
