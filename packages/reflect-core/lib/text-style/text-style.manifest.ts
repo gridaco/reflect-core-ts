@@ -46,7 +46,7 @@ export interface ITextStyle {
      * css: https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing
      * flutter: https://api.flutter.dev/flutter/painting/TextStyle/letterSpacing.html
      */
-    letterSpacing?: DimensionLength;
+    letterSpacing?: LetterSpacing;
 
     /**
      * css: https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing
