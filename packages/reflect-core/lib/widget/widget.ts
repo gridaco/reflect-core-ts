@@ -1,27 +1,21 @@
 /**
  * the default widget key interface. infered from design source.
  */
-export interface WidgetKey {
-    id: string;
-    name: string;
-    originName: string;
-}
-
 export class WidgetKey {
     id: string;
     name: string;
-    originName: string;
+    readonly originName: string;
     constructor({
         id = `${Math.random()}`.replace(".", ""),
         originName = "unknown",
         name,
     }: {
         id: string;
-        originName: string;
+        originName?: string;
         name?: string;
     }) {
         this.id = id;
-        this.originName = originName;
+        (this.originName as any) = originName;
         this.name = name ?? originName;
     }
 
@@ -29,15 +23,35 @@ export class WidgetKey {
         k: WidgetKey,
         {
             id,
+            name,
         }: {
             id?: string;
+            name?: string;
         }
     ): WidgetKey {
-        return new WidgetKey({
+        const copied = k.constructor({
             id: id ?? k.id,
             originName: k.originName,
-            name: k.name,
+            name: name ?? k.name,
+            ...k,
         });
+
+        // set dynamic properties
+        const _k = { ...k };
+        delete _k.id;
+        delete _k.name;
+        delete _k.originName;
+
+        Object.assign(copied, {
+            ...k,
+        });
+
+        return copied;
+    }
+
+    rename(name: string): this {
+        this.name = name;
+        return this;
     }
 }
 
