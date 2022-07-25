@@ -19,34 +19,12 @@ export class WidgetKey {
         this.name = name ?? originName;
     }
 
-    public static copyWith(
-        k: WidgetKey,
-        {
-            id,
-            name,
-        }: {
-            id?: string;
-            name?: string;
-        }
-    ): WidgetKey {
-        const copied = k.constructor({
-            id: id ?? k.id,
-            originName: k.originName,
-            name: name ?? k.name,
-            ...k,
+    copyWith({ id, name }: { id?: string; name?: string }): WidgetKey {
+        return new WidgetKey({
+            id: id ?? this.id,
+            originName: this.originName,
+            name: name ?? this.name,
         });
-
-        // set dynamic properties
-        const _k = { ...k };
-        delete _k.id;
-        delete _k.name;
-        delete _k.originName;
-
-        Object.assign(copied, {
-            ...k,
-        });
-
-        return copied;
     }
 
     rename(name: string): this {
