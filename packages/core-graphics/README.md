@@ -1,4 +1,4 @@
-# CG Manifest.
+# Reflect Core Graphics Typings
 
 This is a core definitions That follows CG graphics standard.
 
