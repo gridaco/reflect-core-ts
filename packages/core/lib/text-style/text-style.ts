@@ -1,11 +1,11 @@
-// import { LetterSpacing } from "../letter-spacing";
-import { DimensionLength } from "..";
+import type { LetterSpacing } from "../letter-spacing";
+import type { DimensionLength } from "..";
+import type { TextShadow } from "../text-shadow";
+import type { ITextStyle as ITextStyle } from "./text-style.manifest";
 import { Color, Colors } from "../color";
 import { FontStyle } from "../font-style";
 import { FontWeight } from "../font-weight";
 import { TextDecoration, TextDecorationStyle } from "../text-decoration";
-import { TextShadow } from "../text-shadow";
-import { ITextStyle as ITextStyle } from "./text-style.manifest";
 import { TextTransform } from "../text-transform";
 export class TextStyle implements ITextStyle {
     fontFamily: string;
@@ -17,7 +17,7 @@ export class TextStyle implements ITextStyle {
     decoration: TextDecoration;
     decorationStyle?: TextDecorationStyle;
     decorationThickness?: number;
-    letterSpacing: DimensionLength;
+    letterSpacing: LetterSpacing;
     wordSpacing?: number;
     lineHeight: DimensionLength;
     textShadow: TextShadow[];

@@ -1,0 +1,21 @@
+{
+  "name": "@reflect-ui/font-utils",
+  "version": "0.0.5-alpha.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "tsc",
+    "prepack": "yarn clean && yarn build"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  }
+}

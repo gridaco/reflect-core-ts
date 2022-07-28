@@ -1,4 +1,8 @@
 {
     "name": "@reflect-ui/core-color",
-    "version": "0.0.0"
+    "version": "0.0.5-alpha.0",
+    "private": false,
+    "publishConfig": {
+        "access": "public"
+    }
 }

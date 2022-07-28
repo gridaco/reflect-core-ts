@@ -1,4 +1,21 @@
 {
-    "name": "@reflect-ui/core-graphics",
-    "version": "0.0.0"
+    "name": "@reflect-ui/cg",
+    "version": "0.0.5-alpha.0",
+    "description": "Reflect Core graphics module",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "clean": "rimraf dist",
+        "build": "tsc",
+        "prepack": "yarn clean && yarn build"
+    },
+    "files": [
+        "dist",
+        "README.md",
+        "LICENSE"
+    ],
+    "private": false,
+    "publishConfig": {
+        "access": "public"
+    }
 }

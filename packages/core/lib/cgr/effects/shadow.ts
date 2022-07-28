@@ -1,6 +1,6 @@
+import type { BlendMode } from "@reflect-ui/cg";
 import { Color } from "../../color";
 import { Vector } from "../../uiutils/types";
-import { BlendMode } from "../../cg/filters";
 
 export interface ShadowEffect {
     readonly color: Color;
