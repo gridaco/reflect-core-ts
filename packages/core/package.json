@@ -2,9 +2,9 @@
     "name": "@reflect-ui/core",
     "version": "0.0.3",
     "scripts": {
-        "prepack": "yarn clean && tsc",
+        "build": "tsc",
+        "prepack": "yarn clean && yarn build",
         "clean": "rimraf dist",
-        "tsc": "tsc",
         "test": "tsc"
     },
     "main": "dist/index.js",

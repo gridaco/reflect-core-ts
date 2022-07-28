@@ -94,7 +94,6 @@ export * from "./length";
 export * from "./background";
 
 // super core
-export * as cg from "./cg";
 export * as cgr from "./cgr";
 export * as color from "./color";
 export * as utils from "./uiutils";
