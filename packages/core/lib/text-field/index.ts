@@ -21,8 +21,7 @@ export interface ITextFieldManifest extends IEditableTextManifest {
 }
 
 export class TextField extends EditableText implements ITextFieldManifest {
-    // @ts-ignore
-    readonly _type = "text-field";
+    readonly _type = "text-field" as EditableText["_type"];
 
     decoration: TextFieldDecoration;
 
