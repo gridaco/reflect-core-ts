@@ -8,7 +8,7 @@
     ],
     "scripts": {
         "lerna": "lerna",
-        "lerna:publish": "lerna publish",
+        "publish:all": "lerna publish",
         "bootstrap": "lerna bootstrap",
         "build": "lerna run build"
     },
