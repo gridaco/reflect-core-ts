@@ -1,4 +1,9 @@
 {
     "name": "@reflect-ui/core-widget",
-    "version": "0.0.1"
+    "version": "0.0.1",
+    "private": false,
+    "publishConfig": {
+        "access": "public"
+    },
+    "gitHead": "35829e88c511a084b755bb0e7e8bf686d387cf3e"
 }

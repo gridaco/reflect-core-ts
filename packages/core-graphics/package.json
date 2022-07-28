@@ -14,7 +14,9 @@
         "README.md",
         "LICENSE"
     ],
+    "private": false,
     "publishConfig": {
         "access": "public"
-    }
+    },
+    "gitHead": "35829e88c511a084b755bb0e7e8bf686d387cf3e"
 }
