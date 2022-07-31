@@ -2,7 +2,7 @@ import type { Color } from "../color";
 import { MouseCursor, SystemMouseCursors } from "../mouse-cursor";
 import { Widget, WidgetKey } from "../widget";
 import assert from "assert";
-import type { RoundSliderThumbShape } from "../slider.thumb";
+import { RoundSliderThumbShape } from "../slider.thumb";
 
 export interface ISliderManifest {
     activeColor?: Color;
@@ -76,3 +76,6 @@ export class Slider extends Widget implements ISliderManifest {
         this.initialValue = initialValue;
     }
 }
+
+// slider.thumb
+export { RoundSliderThumbShape };

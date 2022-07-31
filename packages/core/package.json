@@ -10,6 +10,24 @@
     },
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
+    "exports": {
+        ".": "./dist/index.js",
+        "./reflection": "./dist/_reflection/index.js",
+        "./cgr": "./dist/cgr/index.js"
+    },
+    "typesVersions": {
+        "*": {
+            ".": [
+                "dist/index.d.ts"
+            ],
+            "cgr": [
+                "dist/cgr/index.d.ts"
+            ],
+            "reflection": [
+                "dist/_reflection/index.d.ts"
+            ]
+        }
+    },
     "dependencies": {
         "@reflect-ui/uiutils": "^0.1.2-1"
     },
