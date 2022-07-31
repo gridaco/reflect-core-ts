@@ -12,6 +12,8 @@
     "types": "dist/index.d.ts",
     "exports": {
         ".": "./dist/index.js",
+        "./k": "./dist/_k/index.js",
+        "./experimental": "./dist/_experimental/index.js",
         "./reflection": "./dist/_reflection/index.js",
         "./cgr": "./dist/cgr/index.js"
     },
@@ -19,6 +21,12 @@
         "*": {
             ".": [
                 "dist/index.d.ts"
+            ],
+            "k": [
+                "dist/_k/index.d.ts"
+            ],
+            "experimental": [
+                "dist/_experimental/index.d.ts"
             ],
             "cgr": [
                 "dist/cgr/index.d.ts"
