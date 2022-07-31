@@ -1,6 +1,6 @@
 {
     "name": "@reflect-ui/cg",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "Reflect Core graphics module",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
