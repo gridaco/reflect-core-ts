@@ -1,6 +1,6 @@
 {
     "name": "@reflect-ui/core",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "private": false,
     "scripts": {
         "build": "tsc",
@@ -43,7 +43,7 @@
         "@reflect-ui/cg": "^0.1.1"
     },
     "devDependencies": {
-        "@reflect-ui/cg": "^0.0.8",
+        "@reflect-ui/cg": "^0.0.9",
         "@types/node": "^18.0.6",
         "typescript": "^4.4.4"
     },
