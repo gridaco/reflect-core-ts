@@ -36,8 +36,18 @@ export interface IEdgeInsetsWidget {
     margin?: EdgeInsets;
 }
 
+export interface IBackgroundWidget {
+    background?: Background;
+}
+export interface IBorderWidget {
+    border?: Border;
+    borderRadius?: BorderRadiusManifest;
+}
+
 export interface IDefaultStyleWidget
     extends IWHStyleWidget,
+        IBackgroundWidget,
+        IBorderWidget,
         IPositionedWidget,
         IBoxShadowWidget,
         IEdgeInsetsWidget {}
