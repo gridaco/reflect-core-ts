@@ -10,6 +10,8 @@ import { FontWeight } from "@reflect-ui/core";
  * 5. Roboto-ExtraLight -> extra-light
  * 6. Roboto-extra-light -> extra-light
  * 7. roboto-extralight -> extra-light
+ * 8. Roboto Mono Bold -> bold
+ * 9. RobotoMono-Bold -> bold
  * @param fontStyle
  */
 export function inferFontWeight(fontStyle: string): FontWeight {

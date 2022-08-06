@@ -2,7 +2,8 @@
     "extends": "../../tsconfig.json",
     "compilerOptions": {
         "outDir": "dist",
-        "sourceMap": false
+        "sourceMap": false,
+        "allowJs": false
     },
-    "exclude": ["node_modules", "dist", "__test__", "docs"]
+    "exclude": ["node_modules", "dist", "__test__", "docs", "jest.config.js"]
 }
