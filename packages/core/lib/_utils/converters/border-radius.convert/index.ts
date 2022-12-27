@@ -1,4 +1,4 @@
-import { BorderRadiusManifest } from "../../../border-radius";
+import type { BorderRadiusManifest } from "../../../border-radius";
 
 /**
  * converts reflect border radius to universal format
