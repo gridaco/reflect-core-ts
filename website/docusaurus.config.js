@@ -134,6 +134,28 @@ const config = {
                 darkTheme: darkCodeTheme,
             },
         }),
+    plugins: [
+        [
+            // https://github.com/tgreyuk/typedoc-plugin-markdown/issues/445
+            "docusaurus-plugin-typedoc",
+            {
+                // TypeDoc options
+                entryPoints: [
+                    // core
+                    "../packages/core/lib/index.ts",
+                ],
+                tsconfig: "../packages/core/tsconfig.json",
+                // entryPointStrategy: "packages",
+
+                // Plugin options
+                // out: "references",
+                sidebar: {
+                    fullNames: true,
+                },
+                // watch: process.env.TYPEDOC_WATCH,
+            },
+        ],
+    ],
 };
 
 module.exports = config;
