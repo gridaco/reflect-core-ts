@@ -3,10 +3,13 @@
   "useNx": true,
   "npmClient": "yarn",
   "useWorkspaces": true,
-  "version": "0.0.10",
+  "version": "0.0.11",
   "command": {
     "version": {
-      "allowBranch": ["main", "organize/monorepo"]
+      "allowBranch": [
+        "main",
+        "organize/monorepo"
+      ]
     }
   }
 }
