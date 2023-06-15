@@ -1,34 +1,34 @@
 name: Publish Packages
 
 on:
-    push:
-        branches:
-            - main # or the name of your default branch
+  push:
+    branches:
+      - main # or the name of your default branch
 
 jobs:
-    publish:
-        runs-on: ubuntu-latest
+  publish:
+    runs-on: ubuntu-latest
 
-        steps:
-            - uses: actions/checkout@v2
-            - name: Setup Node.js
-              uses: actions/setup-node@v2
-              with:
-                  node-version: "16"
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
 
-            - name: Install Dependencies
-              run: yarn install --frozen-lockfile
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
 
-            - name: Bootstrap Lerna
-              run: npx lerna bootstrap
+      - name: Bootstrap Lerna
+        run: npx lerna bootstrap
 
-            - name: Configure Git
-              run: |
-                  git config user.name "gridabot"
-                  git config user.email "github@grida.co"
+      - name: Configure Git
+        run: |
+          git config user.name "gridabot"
+          git config user.email "github@grida.co"
 
-            - name: Publish with Lerna
-              run: |
-                  echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_PUBLISH_TOKEN }}" > .npmrc
-                  npx lerna version --conventional-commits --yes --create-release github --message "chore(release): publish"
-                  npx lerna publish from-git --yes --no-verify-access
+      - name: Publish with Lerna
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_PUBLISH_TOKEN }}" > .npmrc
+          npx lerna version --conventional-commits --yes --create-release github --message "chore(release): publish"
+          npx lerna publish from-git --yes --no-verify-access
