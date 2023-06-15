@@ -3,6 +3,9 @@ import type { BoxFit } from "../box-fit";
 import type { Rect } from "../cgr";
 import type { ImageRepeat } from "../image-repeat";
 
+/**
+ * A Manifest for an image.
+ */
 export interface ImageManifest {
     src: string;
     /**
@@ -31,7 +34,9 @@ export interface ImageManifest {
     fit?: BoxFit;
 
     repeat?: ImageRepeat;
+}
 
+export interface ImageWidgetManifest extends ImageManifest {
     readonly width: number;
     readonly height: number;
 }

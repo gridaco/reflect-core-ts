@@ -1,12 +1,15 @@
+import { DefaultStyleWidget, WidgetKey } from "../widget";
 import type { BoxFit } from "../box-fit";
 import type { Rect } from "../cgr";
 import { Alignment } from "../alignment";
 import { ImageRepeat } from "../image-repeat";
-import { ImageManifest } from ".";
-import { DefaultStyleWidget, WidgetKey } from "../widget";
+import type { ImageWidgetManifest } from "./image.manifest";
 import assert from "assert";
 
-export class ImageWidget extends DefaultStyleWidget implements ImageManifest {
+export class ImageWidget
+    extends DefaultStyleWidget
+    implements ImageWidgetManifest
+{
     readonly _type = "ImageWidget";
     readonly src: string;
     readonly width: number;
@@ -30,7 +33,7 @@ export class ImageWidget extends DefaultStyleWidget implements ImageManifest {
         semanticLabel,
     }: {
         key: WidgetKey;
-    } & ImageManifest) {
+    } & ImageWidgetManifest) {
         super({ key });
 
         assert(src != null);
