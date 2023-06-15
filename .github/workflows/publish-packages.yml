@@ -24,8 +24,8 @@ jobs:
 
             - name: Configure Git
               run: |
-                  git config user.name "your-bot-name"
-                  git config user.email "your-bot-email"
+                  git config user.name "gridabot"
+                  git config user.email "github@grida.co"
 
             - name: Publish with Lerna
               run: |
