@@ -1,6 +1,6 @@
 {
     "name": "@reflect-ui/core-geometry",
-    "version": "0.0.11",
+    "version": "0.0.12",
     "private": false,
     "publishConfig": {
         "access": "public"
